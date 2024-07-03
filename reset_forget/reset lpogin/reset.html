@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="language.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" />
+    <style>
+        /* Your CSS styles here */
+        .toggle-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            /* Adjust the top position as needed */
+            left: 10px;
+            /* Adjust the left position as needed */
+            z-index: 999;
+            /* Ensure it's above other elements */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            box-sizing: border-box;
+        }
+
+        .resend-otp {
+  display: flex;
+justify-content: center;
+margin-top: 0px;
+font-size: 0.5em;
+color: #ffffff;
+cursor: pointer;
+background: #26344d;
+text-decoration: none;
+padding: 14px 10px;
+border-radius: 5px;
+}
+
+        .resend-otp:hover {
+            color: #0056b3;
+        }
+
+
+        .content-container {
+            margin-top: 20px;
+        }
+
+        .iti--allow-dropdown input,
+        .iti--allow-dropdown input[type=text],
+        .iti--allow-dropdown input[type=tel],
+        .iti--separate-dial-code input,
+        .iti--separate-dial-code input[type=text],
+        .iti--separate-dial-code input[type=tel] {
+            padding-right: 0px;
+            padding-left: 52px;
+            margin-left: 0;
+            width: 230px;
+        }
+
+        .white-container {
+            background-color: white;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            padding: 10px;
+            display: flex;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .white-container ol {
+            color: black;
+            font-size: 15px;
+        }
+
+        .otp-input-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .otp-input {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .otp-input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+        @media (max-width: 600px) {
+
+            .reset-password-parent {
+    flex-direction: row;
+    padding: 0 0 4.800000000000011px;
+    gap: var(--gap-xl);
+    max-width: 100%;
+    font-size: 30px;
+}
+
+.reset-password {
+  margin: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
+}
+            .otp-input {
+                width: 30px;
+                height: 30px;
+                font-size: 1em;
+            }
+
+            .otp-input-container {
+                gap: 5px;
+            }
+
+            .resend-otp {
+                display: flex;
+        justify-content: center;
+        margin-top: 0px;
+        font-size: 0.5em;
+        color: #ffffff;
+        cursor: pointer;
+        background: #26344d;
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 5px;
+            }
+
+        }
+
+
+
+        .iti__flag-container {
+            position: absolute;
+            top: -8px;
+            bottom: 0;
+            right: 8;
+            padding: 1px;
+        }
+
+        .iti__flag-box,
+        .iti__country-name {
+            margin-right: 6px;
+            color: black;
+        }
+
+        .iti input,
+        .iti input[type=text],
+        .iti input[type=tel] {
+            position: relative;
+            z-index: 0;
+            margin-top: -5px !important;
+            margin-bottom: 0 !important;
+            padding-right: 0px;
+            margin-right: 0;
+        }
+
+        .phone-number-input {
+            padding-left: 50px;
+            /* Adjust this based on the width of the flag dropdown */
+        }
+
+        .nav-list {
+            display: none;
+        }
+
+        .nav-list.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+  
+      
+    <div class="form-container">
+        <header>
+            <nav class="navbar m-auto">
+              <ul class="nav-list">
+        
+                <li><a href="" class="current">Admin</a></li>
+                <li><a href="" class="current">Players</a></li>
+        
+        
+              </ul>
+              <div class="nav_btn_flexbox">
+                <div class="btn-cashback">
+                  <div class="language-icon" id="languageIcon">
+                    <img src="ion_earth.png" alt="Language Icon">
+        
+                  </div>
+        
+                  <div class="modal" id="modal">
+                    <div class="modal-content">
+                      <span class="close" id="closeModal">&times;</span>
+                      <h2>Select Language</h2>
+                      <div class="languages">
+                        <div class="language">
+                          <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English"
+                            class="flag">
+                          <p>English</p>
+                        </div>
+                        <div class="language">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_China.svg" alt="Chinese"
+                            class="flag">
+                          <p>Chinese</p>
+                        </div>
+                        <div class="language">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg" alt="Malaysian"
+                            class="flag">
+                          <p>Malaysian</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="toggle-button" onclick="toggleNavbar()">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              </div>
+            </nav>
+          </header>
+        <div class="form-row">
+            <div class="frame-parent2">
+                <div class="rectangle-parent">
+                    <div class="frame-child4"></div>
+                    <div class="reset-password-parent">
+                        <h1 class="reset-password">reset password</h1>
+                        <div class="password-account-security-rese-wrapper">
+                            <img class="password-account-security-rese-icon" loading="lazy" alt=""
+                                src="img/7023958_password_account_security_reset_safety_icon 1.png" />
+                        </div>
+                    </div>
+                    <form>
+                        <div class="agent-id-parent">
+                            <h3 class="agent-id">*Agent ID</h3>
+                            <input class="group-input" id="agentId" name="agentId" placeholder=" Agent ID"
+                                type="text" required />
+                        </div>
+
+                        <div class="frame-parent3">
+                            <div class="mobile-number-parent">
+                                <h3 class="mobile-number">*Mobile Number</h3>
+                            </div>
+                            <div class="rectangle-group">
+                                <div class="frame-child5"></div>
+                                <input id="phone" class="phone-number-input" name="phone"
+                                    placeholder=" Mobile Number" type="text" pattern="\d{10}" required />
+                            </div>
+                        </div>
+
+                        <div class="frame-parent3">
+                            <label for="email">*Email ID</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error" id="emailError"></div>
+                        </div>
+
+                        <div class="frame-parent3">
+                            <label for="newPassword">*New Password</label>
+                            <input type="password" id="newPassword" name="newPassword" required minlength="8">
+                            <span class="eye" onclick="togglePassword('newPassword', 'eye1')">
+                                <i id="eye1" class="fa fa-eye"></i>
+                            </span>
+                            <div class="error" id="passwordError"></div>
+                        </div>
+                        <div class="frame-parent3">
+                            <label for="confirmPassword">*Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <span class="eye" onclick="togglePassword('confirmPassword', 'eye2')">
+                                <i id="eye2" class="fa fa-eye"></i>
+                            </span>
+                            <div class="error" id="confirmPasswordError"></div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="reqMethod"
+                                class="col-form-label col-md-2 text-md-right col-sm-3 col-12">Request
+                                Method:</label>
+                            <div class="col-md-10 col-sm-9 col-12 mt-1" id="otp_method">
+                                <div class="o-t-p-verification">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" id="methodOTPq" name="otp_method"
+                                            class="form-check-input" value="3" required checked>
+                                        <label class="form-check-label" for="methodOTPq">OTPq</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" id="methodOTP" name="otp_method"
+                                            class="form-check-input" value="1" required>
+                                        <label class="form-check-label" for="methodOTP">Receive OTP</label>
+                                    </div>
+                                    <div class="form-check form-check-inline" id="otp_radio">
+                                        <input type="radio" id="methodSMS" name="otp_method"
+                                            class="form-check-input" value="2" required>
+                                        <label class="form-check-label" for="methodSMS">Whatsapp</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="content" class="content-container"></div>
+                        </div>
+
+                        <div class="form-group row method smsOTP" style="display:none">
+                            <label for="OTP" class="col-form-label col-md-2 text-md-right otp_label"></label>
+                        </div>
+                        <button type="button" class="group-button" onclick="validateForm()">
+                            <div class="frame-child8"></div>
+                            <b class="request-otp">Submit</b>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        //nav toggle btn
+        function toggleNavbar() {
+          var navList = document.querySelector('.nav-list');
+          navList.classList.toggle('show');
+        }
+      </script>
+      <script>
+        document.getElementById('languageIcon').addEventListener('click', function () {
+          document.getElementById('modal').style.display = 'flex';
+        });
+    
+        document.getElementById('closeModal').addEventListener('click', function () {
+          document.getElementById('modal').style.display = 'none';
+        });
+    
+        window.addEventListener('click', function (event) {
+          if (event.target === document.getElementById('modal')) {
+            document.getElementById('modal').style.display = 'none';
+          }
+        });
+      </script>
+
+
+
+<!-- reset pass -->
+
+    <script>
+        $(document).ready(function () {
+            $(".toggle-btn").click(function () {
+                $(".nav-list").toggleClass("active");
+            });
+        });
+    </script>
+
+
+
+
+    <script>
+        function togglePassword(fieldId, eyeId) {
+            var passwordField = document.getElementById(fieldId);
+            var eyeIcon = document.getElementById(eyeId);
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+        const input = document.querySelector("#phone");
+        const iti = window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function (callback) {
+                fetch('https://ipinfo.io?token=<your_token>', { headers: { 'Accept': 'application/json' } })
+                    .then(response => response.json())
+                    .then((resp) => {
+                        const countryCode = (resp && resp.country) ? resp.country : "us";
+                        callback(countryCode);
+                    });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+
+        // Update the input value with the selected country's dial code on country change
+        input.addEventListener('countrychange', function (e) {
+            const selectedCountryData = iti.getSelectedCountryData();
+            const dialCode = selectedCountryData.dialCode;
+            const currentNumber = iti.getNumber().replace(`+${dialCode}`, '').trim();
+            input.value = `+${dialCode} ${currentNumber}`;
+        });
+
+        // Ensure the initial value is set correctly
+        input.addEventListener('input', function () {
+            const selectedCountryData = iti.getSelectedCountryData();
+            const dialCode = selectedCountryData.dialCode;
+            const currentNumber = input.value.replace(`+${dialCode}`, '').trim();
+            input.value = `+${dialCode} ${currentNumber}`;
+        });
+
+        // Automatically add the dial code when the input is focused and empty
+        input.addEventListener('focus', function () {
+            const selectedCountryData = iti.getSelectedCountryData();
+            if (input.value.trim() === '') {
+                input.value = `+${selectedCountryData.dialCode} `;
+            }
+        });
+    </script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const otpMethodElements = document.querySelectorAll('input[name="otp_method"]');
+            const contentContainer = document.getElementById('content');
+
+            otpMethodElements.forEach(element => {
+                element.addEventListener('change', function () {
+                    contentContainer.innerHTML = '';  // Clear previous content
+
+                    if (this.value === '3') {
+                        // Show dummy content for OTPq
+                        const dummyContent = document.createElement('div');
+                        dummyContent.className = 'white-container';
+                        dummyContent.innerHTML = `
+                    <ol>
+                        <li>Download "OTPq" Apps From PlayStore / HuaweiStore / AppleStore If You Does Not Have It</li>
+                        <li>Verify Your Registered Phone Number in "OTPq" (via WhatsAPP)</li>
+                        <li>After Verified Sucessful in "OTPq", Click on the "Request OTP" Button As Below, Your will Receive an OTP in APP</li>
+                        <li>Key In the OTP That You Receive in you "OTPq" APP</li>
+                    </ol>
+                `;
+                        contentContainer.appendChild(dummyContent);
+                    } else if (this.value === '1' || this.value === '2') {
+                        // Show OTP input boxes
+                        const otpContainer = document.createElement('div');
+                        otpContainer.className = 'white-container';
+
+                        for (let i = 0; i < 6; i++) {
+                            const inputBox = document.createElement('input');
+                            inputBox.type = 'text';
+                            inputBox.maxLength = '1';
+                            inputBox.className = 'otp-input';
+                            otpContainer.appendChild(inputBox);
+                        }
+
+                        contentContainer.appendChild(otpContainer);
+                    }
+                });
+            });
+
+            // Trigger change event for the checked radio button on page load
+            document.querySelector('input[name="otp_method"]:checked').dispatchEvent(new Event('change'));
+        });
+
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const otpMethodElements = document.querySelectorAll('input[name="otp_method"]');
+            const contentContainer = document.getElementById('content');
+
+            otpMethodElements.forEach(element => {
+                element.addEventListener('change', function () {
+                    contentContainer.innerHTML = '';  // Clear previous content
+
+                    if (this.value === '3') {
+                        // Show dummy content for OTPq
+                        const dummyContent = document.createElement('div');
+                        dummyContent.className = 'white-container';
+                        dummyContent.innerHTML = `
+                  <ol>
+                        <li>Download "OTPq" Apps From PlayStore / HuaweiStore / AppleStore If You Does Not Have It</li>
+                        <li>Verify Your Registered Phone Number in "OTPq" (via WhatsAPP)</li>
+                        <li>After Verified Sucessful in "OTPq", Click on the "Request OTP" Button As Below, Your will Receive an OTP in APP</li>
+                        <li>Key In the OTP That You Receive in you "OTPq" APP</li>
+                    </ol>
+                `;
+                        contentContainer.appendChild(dummyContent);
+                    } else if (this.value === '1' || this.value === '2') {
+                        // Show OTP input boxes and "Resend OTP" text
+                        const otpContainer = document.createElement('div');
+                        otpContainer.className = 'white-container';
+
+                        const otpInputContainer = document.createElement('div');
+                        otpInputContainer.className = 'otp-input-container';
+
+                        for (let i = 0; i < 6; i++) {
+                            const inputBox = document.createElement('input');
+                            inputBox.type = 'text';
+                            inputBox.maxLength = '1';
+                            inputBox.className = 'otp-input';
+                            otpInputContainer.appendChild(inputBox);
+                        }
+
+                        otpContainer.appendChild(otpInputContainer);
+
+                        const resendOtpContainer = document.createElement('div');
+                        resendOtpContainer.className = 'resend-otp';
+                        resendOtpContainer.innerText = 'Resend';
+                        resendOtpContainer.onclick = function () {
+                            alert('OTP has been resent!');
+                        };
+
+                        otpContainer.appendChild(resendOtpContainer);
+
+                        contentContainer.appendChild(otpContainer);
+                    }
+                });
+            });
+
+            // Trigger change event for the checked radio button on page load
+            document.querySelector('input[name="otp_method"]:checked').dispatchEvent(new Event('change'));
+        });
+
+    </script>
+
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+            document.getElementById('confirmPasswordError').textContent = '';
+
+            // Validate Agent ID
+            const agentId = document.getElementById('agentId');
+            if (agentId.value.trim() === '') {
+                alert('Agent ID is required.');
+                isValid = false;
+            }
+
+            // Validate Phone Number
+            const phone = document.getElementById('phone');
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone.value)) {
+                alert('Enter a valid 10-digit mobile number.');
+                isValid = false;
+            }
+
+            // Validate Email
+            const email = document.getElementById('email');
+            if (!email.checkValidity()) {
+                document.getElementById('emailError').textContent = 'Enter a valid email address.';
+                isValid = false;
+            }
+
+            // Validate New Password
+            const newPassword = document.getElementById('newPassword');
+            if (newPassword.value.length < 8) {
+                document.getElementById('passwordError').textContent = 'Password must be at least 8 characters long.';
+                isValid = false;
+            }
+
+            // Validate Confirm Password
+            const confirmPassword = document.getElementById('confirmPassword');
+            if (newPassword.value !== confirmPassword.value) {
+                document.getElementById('confirmPasswordError').textContent = 'Passwords do not match.';
+                isValid = false;
+            }
+
+            // If all validations pass, submit the form
+            if (isValid) {
+                alert('Form submitted successfully!');
+                // Replace the alert with actual form submission logic
+            }
+        }
+
+        function togglePassword(fieldId, eyeId) {
+            const passwordField = document.getElementById(fieldId);
+            const eyeIcon = document.getElementById(eyeId);
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                eyeIcon.classList.add('fa-eye-slash');
+                eyeIcon.classList.remove('fa-eye');
+            } else {
+                passwordField.type = 'password';
+                eyeIcon.classList.add('fa-eye');
+                eyeIcon.classList.remove('fa-eye-slash');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Hover and Click</title>
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="address.css">
+  <link rel="stylesheet" href="product2.css">
+</head>
+
+<body>
+  <div class="bacgroundimage">
+    <div class="recipient-info">
+      <div class="bag-parent">
+        <button><span class="material-symbols-outlined">
+          arrow_back_ios
+      </span></button>
+  <p>BAG ------------ADDRESS -----------<span style="color:#dd7e25;">RECIPIENT INFO</span></p>
+      </div>
+    </div>
+    <div class="container">
+      
+      <div class="left">
+        <div class="leftimg">
+          <img src="/img/image 2.png" alt="Image 1" class="thumbnail" data-large="/img/image 2.png">
+        </div>
+
+        <div class="leftimg">
+          <img src="/img/image 3.png" alt="Image 2" class="thumbnail" data-large="/img/image 3.png">
+        </div>
+        <div class="leftimg">
+          <img src="/img/image 4.png" alt="Image 3" class="thumbnail" data-large="/img/image 4.png">
+        </div>
+        <div class="leftimg">
+          <img src="/img/image 5.png" alt="Image 4" class="thumbnail" data-large="/img/image 5.png">
+        </div>
+      </div>
+      <div class="right">
+        <img src="/img/image 6.png" alt="Large Image" id="largeImage">
+      </div>
+      <section class="brand-info">
+        <div class="brand-description-parent">
+          <div class="brand-description">
+            <div class="brand-content">
+              <div class="brand-name">
+                <div class="brand-lg-parent">
+                  <a class="brand-lg">
+                    <span>Brand: </span>
+                    <span class="lg">LG </span>
+                  </a>
+                  <div class="line-wrapper">
+                    <div class="frame-item"></div>
+                  </div>
+                </div>
+                <div class="bar-container">
+                  <div class="code-31234">
+                    <span>Code: </span>
+                    <span class="span">31234</span>
+                  </div>
+                  <div class="bar-container-inner">
+                    <div class="frame-inner"></div>
+                  </div>
+                </div>
+                <!-- <div class="tgp-300000-parent">
+                  <div class="tgp-300000">
+                    <span>T.GP:</span>
+                    <span class="span1"> 300000</span>
+                  </div>
+                  <div class="line-div"></div>
+                </div> -->
+                <div class="empty-del">
+                  <span>Empty: </span>
+                  <span class="del">DEL</span>
+                </div>
+              </div>
+              <div class="model">
+                <a class="model-oled42c2psa">
+                  <span>Model:</span>
+                  <span class="oled42c2psa"> OLED42C2PSA</span>
+                </a>
+                <!-- <div class="ugp-150000">
+                  <span>U.GP:</span>
+                  <span class="span2"> 150000</span>
+                </div> -->
+                <a class="weight-150000">
+                  <span>Weight:</span>
+                  <span class="span3"> 150000</span>
+                </a>
+              </div>
+            </div>
+            <h3 class="lg-c2-42">
+              LG C2 42 (106cm) 4K Smart OLED evo TV | WebOS | Cinema HDR
+            </h3>
+          </div>
+          <div class="main-price">
+            <div class="main-price1">899.00</div>
+          </div>
+
+          <div class="quantity-selector">
+            <button id="decrease-quantity">-</button>
+            <span id="quantity">1</span>
+            <button id="increase-quantity">+</button>
+          </div>
+          <button class="buy-now">Buy Now</button>
+
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- <section class="brand-info">
+    <div class="brand-description-parent">
+      <div class="brand-description">
+        <div class="brand-content">
+          <div class="brand-name">
+            <div class="brand-lg-parent">
+              <a class="brand-lg">
+                <span>Brand: </span>
+                <span class="lg">LG </span>
+              </a>
+              <div class="line-wrapper">
+                <div class="frame-item"></div>
+              </div>
+            </div>
+            <div class="bar-container">
+              <div class="code-31234">
+                <span>Code: </span>
+                <span class="span">31234</span>
+              </div>
+              <div class="bar-container-inner">
+                <div class="frame-inner"></div>
+              </div>
+            </div>
+            <div class="tgp-300000-parent">
+              <div class="tgp-300000">
+                <span>T.GP:</span>
+                <span class="span1"> 300000</span>
+              </div>
+              <div class="line-div"></div>
+            </div>
+            <div class="empty-del">
+              <span>Empty: </span>
+              <span class="del">DEL</span>
+            </div>
+          </div>
+          <div class="model">
+            <a class="model-oled42c2psa">
+              <span>Model:</span>
+              <span class="oled42c2psa"> OLED42C2PSA</span>
+            </a>
+            <div class="ugp-150000">
+              <span>U.GP:</span>
+              <span class="span2"> 150000</span>
+            </div>
+            <a class="weight-150000">
+              <span>Weight:</span>
+              <span class="span3"> 150000</span>
+            </a>
+          </div>
+        </div>
+        <h3 class="lg-c2-42">
+          LG C2 42 (106cm) 4K Smart OLED evo TV | WebOS | Cinema HDR
+        </h3>
+      </div>
+      <div class="main-price">
+        <div class="main-price1">899.00</div>
+      </div>
+      <div class="price-value">
+        <div class="price">
+          <div class="price-child"></div>
+          <div class="value">1</div>
+        </div>
+      </div>
+      <button class="component-6">
+        <div class="buy-now">Buy Now</div>
+      </button>
+    </div>
+  </section> -->
+  <!-- <div class="product-container">
+    <div class="product-details">
+      <div class="product-info">
+        <p><strong>Brand:</strong> LG</p>
+        <p><strong>Model:</strong> OLED42C2PSA</p>
+        <p><strong>Code:</strong> 31234</p>
+        <p><strong>U.GP:</strong> 150000</p>
+        <p><strong>T.GP:</strong> 300000</p>
+        <p><strong>Weight:</strong> 150000</p>
+        <p><strong>Empty:</strong> DEL</p>
+      </div>
+      <div class="product-title">
+        <h2>LG C2 42 (106CM) 4K SMART OLED EVO TV | WEBOS | CINEMA HDR</h2>
+      </div>
+      <div class="product-price">
+        <span class="currency-symbol">€</span>
+        <span class="price">899.00</span>
+      </div>
+      <div class="quantity-selector">
+        <button id="decrease-quantity">-</button>
+        <span id="quantity">1</span>
+        <button id="increase-quantity">+</button>
+      </div>
+      <button class="buy-now">Buy Now</button>
+    </div>
+  </div> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      const largeImage = document.getElementById('largeImage');
+
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('mouseover', function () {
+          const largeSrc = this.getAttribute('data-large');
+          largeImage.src = largeSrc;
+        });
+
+        thumbnail.addEventListener('click', function () {
+          const largeSrc = this.getAttribute('data-large');
+          largeImage.src = largeSrc;
+        });
+      });
+    });
+
+  </script>
+  <script>
+    // scripts.js
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const decreaseButton = document.getElementById('decrease-quantity');
+      const increaseButton = document.getElementById('increase-quantity');
+      const quantityDisplay = document.getElementById('quantity');
+      let quantity = 1;
+
+      decreaseButton.addEventListener('click', function () {
+        if (quantity > 1) {
+          quantity--;
+          quantityDisplay.textContent = quantity;
+        }
+      });
+
+      increaseButton.addEventListener('click', function () {
+        quantity++;
+        quantityDisplay.textContent = quantity;
+      });
+    });
+
+  </script>
+
+
+</body>
+
+</html>

@@ -5,12 +5,661 @@
 
 .profile-container{
     width: 100%;
-    height: 100vh;
-    background: antiquewhite;
+    height: auto;
+    background: #eeebe7;
 }
 
 .profile-row{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: auto;
     margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-banner-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: darkslateblue;
+    letter-spacing: 2px;
+    padding: 10px 0px;
+}
+
+.profile-banner-image{
+    width: 100%;
+    height: 300px;
+    background-image: url(img/profile_banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.profile_balance{
+    padding: 15px 0px;
+}
+.profile_balance h4{
+    font-size: 25px;
+    padding: 6px 0px;
+}
+.profile-verify{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5px;
+}
+
+.verify-icon{
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+    padding: 10px 0px;
+    
+}
+
+.verify-icon p{
+    color: #275aca;
+}
+
+.profile-qr{
+    color: #275aca;
+}
+.profile-qr span{
+    color: #275aca;
+    font-size: 40px;
+}
+
+.profile-members{
+    width: 100%;
+    height: auto;
+    padding: 10px 5px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+}
+.profile-members-heading{
+    color: #275aca;
+    font-size: 25px;
+}
+
+.profile-members-level{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0px;
+}
+.profile-members-level .level_1 h3{
+    color: #275aca;
+    font-size: 30px;
+}
+.profile-members-level .level_1 p{
+    color: #ccc;
+    font-size: 25px;
+    font-weight: 800;
+}
+.profile-members-level .border-right{
+    width: 10px;
+    height: 50px;
+    border-right: 3px solid #ccc;
+}
+
+.profile-edit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0px;
+}
+
+.profile-edit-link a{
+    text-decoration: none;
+    color: #275aca;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.profile-bank-heading{
+    font-size: 25px;
+    color: #2761cb;
+    font-weight: 600;
+    padding: 0px 10px;
+}
+
+.profile-bank{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #275aca;
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+.bank-add{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #a8a4a4;
+    padding: 5px 0px;
+    margin: 15px 10px;
+}
+.bank-add p{
+    padding-left: 20px;
+}
+.bank-add button{
+    border: none;
+    background: #275ecb;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.bank-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+.bank-name{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.bank-icons img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.bank-icons h4{
+    color: #3a3a3a;
+}
+.bank-icons p{
+    letter-spacing: 1px;
+    color: #626262;
+}
+
+.bank-defult button{
+    border: none;
+    background: #275ecb;
+    padding: 7px 25px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.profile-pass-logou{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.change-pass, .logout{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 9px;
+}
+ .change-pass span{
+    transform: rotate(20deg)
+ }
+
+
+
+
+
+
+
+
+
+.profile-friend{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0px;
+}
+
+.profile-friend-link a{
+    text-decoration: none;
+    color: #275aca;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+@media (max-width:768px) {
+    .profile-banner-image{
+        width: 100%;
+        height: 180px;
+        background-image: url(img/profile_banner.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        color: #fff;
+        border-radius: 10px;
+    }
+    .profile_balance {
+        padding-bottom: 5px;
+    }
+
+    .profile_balance h4 {
+        font-size: 14px;
+        padding: 1px 0px;
+    }
+    .profile_balance p{
+        font-size: 10px;
+        padding: 1px 0px;
+    }
+
+    .profile-verify-heading {
+        font-size: 18px;
+    }
+    .profile-qr span{
+        color: #275aca;
+        font-size: 40px;
+    }
+
+    .profile-members-heading{
+        font-size: 15px;
+    }
+
+    .profile-members-level {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0px;
+    }
+
+    .profile-members-level .level_1 h3 {
+        color: #275aca;
+        font-size: 18px;
+    }
+    .profile-members-level .level_1 p {
+        color: #ccc;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .profile-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .profile-edit-link a span{
+        font-size: 16px;
+    }
+    .profile-bank-heading {
+        font-size: 16px;
+        color: #2761cb;
+        font-weight: 600;
+        padding: 0px 10px;
+    }
+
+    .bank-add {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #a8a4a4;
+        padding: 3px 0px;
+        margin: 14px 10px;
+    }
+    .bank-add button {
+        border: none;
+        background: #275ecb;
+        padding: 5px 10px;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 14px;
+    }
+    .bank-add p {
+        padding-left: 0px;
+        font-size: 12px;
+    }
+
+    .bank-name {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 6px;
+    }
+    .bank-icons img {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+    }
+
+    .bank-icons h4 {
+        color: #3a3a3a;
+        font-size: 14px;
+    }
+
+    .bank-icons p {
+        letter-spacing: 1px;
+        color: #626262;
+        font-size: 14px;
+    }
+
+    .bank-defult button {
+        border: none;
+        background: #275ecb;
+        padding: 6px 16px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .profile-friend-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .change-pass span {
+        transform: rotate(20deg);
+        font-size: 14px;
+    }
+    .change-pass p{
+        font-size: 10px;
+    }
+    .logout p{
+        font-size: 10px;
+    }
+    .logout span{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:480px) {
+    .profile-banner-image{
+        width: 100%;
+        height: 100px;
+        background-image: url(img/profile_banner.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        color: #fff;
+        border-radius: 10px;
+    }
+    .profile_balance {
+        padding-bottom: 5px;
+    }
+
+    .profile_balance h4 {
+        font-size: 14px;
+        padding: 1px 0px;
+    }
+    .profile_balance p{
+        font-size: 10px;
+        padding: 1px 0px;
+    }
+
+    .profile-verify-heading {
+        font-size: 12px;
+    }
+    .profile-members-heading{
+        font-size: 15px;
+    }
+
+    .profile-members-level {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0px;
+    }
+
+    .profile-members-level .level_1 h3 {
+        color: #275aca;
+        font-size: 18px;
+    }
+    .profile-members-level .level_1 p {
+        color: #ccc;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .profile-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .profile-edit-link a span{
+        font-size: 16px;
+    }
+    .profile-bank-heading {
+        font-size: 16px;
+        color: #2761cb;
+        font-weight: 600;
+        padding: 0px 10px;
+    }
+
+    .bank-add {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #a8a4a4;
+        padding: 3px 0px;
+        margin: 14px 10px;
+    }
+    .bank-add button {
+        border: none;
+        background: #275ecb;
+        padding: 5px 10px;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 14px;
+    }
+    .bank-add p {
+        padding-left: 0px;
+        font-size: 12px;
+    }
+
+    .bank-name {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 6px;
+    }
+    .bank-icons img {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+    }
+
+    .bank-icons h4 {
+        color: #3a3a3a;
+        font-size: 14px;
+    }
+
+    .bank-icons p {
+        letter-spacing: 1px;
+        color: #626262;
+        font-size: 14px;
+    }
+
+    .bank-defult button {
+        border: none;
+        background: #275ecb;
+        padding: 6px 16px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .profile-friend-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .change-pass span {
+        transform: rotate(20deg);
+        font-size: 14px;
+    }
+    .change-pass p{
+        font-size: 10px;
+    }
+    .logout p{
+        font-size: 10px;
+    }
+    .logout span{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:360px) {
+    .profile-banner-image{
+        width: 100%;
+        height: 100px;
+        background-image: url(img/profile_banner.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        color: #fff;
+        border-radius: 10px;
+    }
+    .profile_balance {
+        padding-bottom: 5px;
+    }
+
+    .profile_balance h4 {
+        font-size: 14px;
+        padding: 1px 0px;
+    }
+    .profile_balance p{
+        font-size: 10px;
+        padding: 1px 0px;
+    }
+
+    .profile-verify-heading {
+        font-size: 12px;
+    }
+    .profile-members-heading{
+        font-size: 15px;
+    }
+
+    .profile-members-level {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0px;
+    }
+
+    .profile-members-level .level_1 h3 {
+        color: #275aca;
+        font-size: 18px;
+    }
+    .profile-members-level .level_1 p {
+        color: #ccc;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .profile-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .profile-edit-link a span{
+        font-size: 16px;
+    }
+    .profile-bank-heading {
+        font-size: 16px;
+        color: #2761cb;
+        font-weight: 600;
+        padding: 0px 10px;
+    }
+
+    .bank-add {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #a8a4a4;
+        padding: 3px 0px;
+        margin: 14px 10px;
+    }
+    .bank-add button {
+        border: none;
+        background: #275ecb;
+        padding: 5px 10px;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 14px;
+    }
+    .bank-add p {
+        padding-left: 0px;
+        font-size: 12px;
+    }
+
+    .bank-name {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 6px;
+    }
+    .bank-icons img {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+    }
+
+    .bank-icons h4 {
+        color: #3a3a3a;
+        font-size: 14px;
+    }
+
+    .bank-icons p {
+        letter-spacing: 1px;
+        color: #626262;
+        font-size: 14px;
+    }
+
+    .bank-defult button {
+        border: none;
+        background: #275ecb;
+        padding: 6px 16px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .profile-friend-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .change-pass span {
+        transform: rotate(20deg);
+        font-size: 14px;
+    }
+    .change-pass p{
+        font-size: 10px;
+    }
+    .logout p{
+        font-size: 10px;
+    }
+    .logout span{
+        font-size: 14px;
+    }
 }

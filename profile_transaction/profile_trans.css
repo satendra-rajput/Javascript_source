@@ -1,0 +1,394 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.profile_trans{
+    width: 100%;
+    height: 100vh;
+    background: #eeebe7;
+}
+
+.profile_trans-row{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-banner-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #275ecb;
+    letter-spacing: 2px;
+    padding: 10px 0px;
+}
+
+
+.profile-edit{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 25px 20px;
+    gap: 50px;
+}
+
+.profile-edit-link a{
+    text-decoration: none;
+    color: #275aca;
+    font-size: 25px;
+    font-weight: 600;
+}
+.profile-edit-link a span{ 
+   display: block;
+}
+
+.profile-bank-heading{
+    font-size: 25px;
+    color: #2761cb;
+    font-weight: 600;
+    padding: 0px 10px;
+}
+
+.profile-bank{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+.bank-add{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+    margin: 15px 10px;
+}
+.bank-add input{
+    width: 100%;
+    height: 32px;
+    border: none;
+    background: transparent;
+    border-bottom: 3px solid #a4a0a0;
+    outline: none;
+    font-size: 15px;
+}
+
+
+.bank-add button{
+    border: none;
+    background: #275ecb;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 22px;
+    position: absolute;
+    right: 7%;
+    margin-bottom: 13px;
+}
+
+
+.bank-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px;
+}
+.bank-name{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.bank-icons img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.bank-icons h4{
+    color: #3a3a3a;
+}
+.bank-icons p{
+    letter-spacing: 1px;
+    color: #626262;
+}
+
+.bank-defult button{
+    border: none;
+    background: #275ecb;
+    padding: 7px 25px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+@media (max-width:768px) {
+   
+    .profile-verify-heading {
+        font-size: 18px;
+    }
+   
+
+    .profile-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .profile-edit-link a span{
+        font-size: 25px;
+    }
+    .profile-bank-heading {
+        font-size: 16px;
+        color: #2761cb;
+        font-weight: 600;
+        padding: 0px 10px;
+    }
+
+    .bank-add {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3px 0px;
+        margin: 14px 10px;
+    }
+    .bank-add button{
+        border: none;
+        background: #275ecb;
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 22px;
+        position: absolute;
+        right: 8%;
+        margin-bottom: 13px;
+    }
+    .bank-add p {
+        padding-left: 0px;
+        font-size: 12px;
+    }
+
+    .bank-name {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 6px;
+    }
+    .bank-icons img {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+    }
+
+    .bank-icons h4 {
+        color: #3a3a3a;
+        font-size: 14px;
+    }
+
+    .bank-icons p {
+        letter-spacing: 1px;
+        color: #626262;
+        font-size: 14px;
+    }
+
+    .bank-defult button {
+        border: none;
+        background: #275ecb;
+        padding: 6px 16px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width:480px) {
+
+    .profile-verify-heading {
+        font-size: 12px;
+    }
+    
+    .profile-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .profile-edit-link a span{
+        font-size: 16px;
+    }
+
+    .profile-edit-link a span{ 
+        display: block;
+     }
+
+    .profile-bank-heading {
+        font-size: 16px;
+        color: #2761cb;
+        font-weight: 600;
+        padding: 0px 10px;
+    }
+
+    .bank-add {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3px 0px;
+        margin: 14px 10px;
+    }
+    .bank-add input {
+        width: 100%;
+        height: 32px;
+        border: none;
+        background: transparent;
+        border-bottom: 3px solid #a4a0a0;
+        outline: none;
+        font-size: 10px;
+    }
+    .bank-add button{
+        border: none;
+        background: #275ecb;
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 22px;
+        position: absolute;
+        right: 10%;
+        margin-bottom: 13px;
+    }
+    .bank-add p {
+        padding-left: 0px;
+        font-size: 12px;
+    }
+
+    .bank-name {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 6px;
+    }
+    .bank-icons img {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+    }
+
+    .bank-icons h4 {
+        color: #3a3a3a;
+        font-size: 14px;
+    }
+
+    .bank-icons p {
+        letter-spacing: 1px;
+        color: #626262;
+        font-size: 14px;
+    }
+
+    .bank-defult button {
+        border: none;
+        background: #275ecb;
+        padding: 6px 16px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:380px) {
+
+    .profile-verify-heading {
+        font-size: 12px;
+    }
+    .profile-edit {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 10px 20px;
+        gap: 50px;
+    }
+
+    .profile-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .profile-edit-link a span{
+        font-size: 16px;
+    }
+    .profile-bank-heading {
+        font-size: 16px;
+        color: #2761cb;
+        font-weight: 600;
+        padding: 0px 10px;
+    }
+
+    .bank-add {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3px 0px;
+        margin: 14px 10px;
+    }
+    .bank-add input {
+        width: 100%;
+        height: 32px;
+        border: none;
+        background: transparent;
+        border-bottom: 3px solid #a4a0a0;
+        outline: none;
+        font-size: 9px;
+    }
+    .bank-add button{
+        border: none;
+        background: #275ecb;
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 22px;
+        position: absolute;
+        right: 10%;
+        margin-bottom: 13px;
+    }
+
+    .bank-name {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 6px;
+    }
+    .bank-icons img {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+    }
+
+    .bank-icons h4 {
+        color: #3a3a3a;
+        font-size: 13px;
+    }
+
+    .bank-icons p {
+        letter-spacing: 1px;
+        color: #626262;
+        font-size: 13px;
+    }
+
+    .bank-defult button {
+        border: none;
+        background: #275ecb;
+        padding: 6px 16px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 12px;
+    }
+
+}

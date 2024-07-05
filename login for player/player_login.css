@@ -574,7 +574,7 @@ html {
       
     }
     .login-container {
-        width: 400px;
+        width: 410px;
         background-image: url(img/frame_form.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -584,12 +584,18 @@ html {
         color: white;
         position: relative;
         margin: 0 0px;
-        
+        left: -15px;
         /* overflow: hidden; */
         top: 69px;
         animation: rotating-border 4s infinite;
     
     }
+
+    .logo-container {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 16px;
+}
 
     .imgcontainer img {
         width: 100%;
@@ -598,11 +604,11 @@ html {
         position: static;
     }
 
-    #loginForm{
+    #loginForm {
         width: 260px;
         margin: auto;
         margin-bottom: 50px;
-        margin-right: 77px;
+        margin-right: 65px;
     }
 
     .imgcontainer {

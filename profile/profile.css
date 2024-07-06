@@ -242,7 +242,6 @@
 .profile-friend-link a span{ 
     display: none;
  }
-
 @media (max-width:768px) {
     .profile-banner-image{
         width: 100%;
@@ -862,4 +861,128 @@
     .logout span{
         font-size: 14px;
     }
+}
+
+
+
+
+
+
+
+ /* The Modal (background) */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    bottom: 200px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 2% auto; /* 15% from the top and centered */
+    padding:    0px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #313030;
+  }
+
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+
+    padding: 10px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+
+.form-container {
+    width: 360px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 34px;
+    border-radius: 8px;
+}
+
+.form-container p{
+    color: #275bc2;
+    text-shadow: 0px 0px 1px #275bc2;
+}
+
+h2 {
+    margin-top: 0;
+    color: #275bc2;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #275bc2;
+    text-shadow: 0px 0px 1px #275bc2;
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.form-container input {
+    width: 100%;
+    height: 25px;
+    padding: 8px 8px;
+    margin-bottom: 10px;
+    border: 2px solid #275bc2;
+    border-radius: 12px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 34px
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttons button[type="button"] {
+    background-color: #275ecb;
+    color: white;
+    padding: 10px 49px;
+}
+
+.buttons button[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 49px;
+}
+
+.error {
+    color: red !important;
+    margin-top: 10px;
 }

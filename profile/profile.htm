@@ -145,7 +145,7 @@
                         <span class="material-symbols-outlined">
                             vpn_key
                             </span>
-                        <p style="color: #275ecb;">CHANGE PASSWORD</p>
+                        <p style="color: #275ecb; cursor: pointer;" id="openModalBtn">CHANGE PASSWORD</p>
                     </div>
                     <div class="logout">
                         <p style="color: #275ecb;">LOGOUT</p>
@@ -157,5 +157,44 @@
             </div>
         
     </div>
+
+    <!-- hare Model code -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <!-- <span class="close">&times;</span> -->
+          <div class="form-container">
+            <form id="changePasswordForm">
+                <h2>Change Password</h2>
+                
+                <label for="currentPassword">Current Password</label>
+                <input type="password" id="currentPassword" name="currentPassword" required placeholder="Current Password">
+                
+                <label for="newPassword">New Password</label>
+                <input type="password" id="newPassword" name="newPassword" required minlength="8" maxlength="12" placeholder="New Password">
+                
+                <label for="confirmPassword">Confirm New Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm New Password">
+
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Full Name">
+              
+                <br>
+                <p style="color: #f39858;">Rule of Creating Password</p>
+                <p>-Password must be at least 8 and no more then 12 characters long</p>
+                <p>-Can contain letters (A-Z), Numbers (0-9)</p>
+                <p>-Can't contain special characters</p>
+                <p>-Case sensitive</p>
+                <p id="errorMessage" class="error"></p>
+
+                  
+                <div class="buttons">
+                    <button type="button" id="confirmButton" onclick="validateForm()">Confirm</button>
+                    <button type="reset" class="close">Cancel</button>
+                </div>
+            </form>
+        </div>
+      </div>
+
+    <script src="profile.js"></script>
 </body>
 </html>

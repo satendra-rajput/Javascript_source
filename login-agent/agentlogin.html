@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Agent Login</title>
+  <link rel="stylesheet" href="agentlogin.css">
+  <link rel="stylesheet" href="language.css">
+</head>
+<style>
+    .language-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    bottom: 1px;
+    /* right: 20px; */
+    border-radius: 50%;
+    z-index: 1000;
+}
+</style>
+<body>
+
+<div class="agent-container">
+    <div class="agent-row">
+        <header>
+          <nav class="navbar m-auto">
+            <ul class="nav-list">
+              <li><a href="" class="current">Admin</a></li>
+              <li><a href="index.html" class="current">Players</a></li>
+            </ul>
+            <div class="nav_btn_flexbox">
+              <div class="btn-cashback">
+                <div class="language-icon" id="languageIcon">
+                  <img src="img/ion_earth.png" alt="Language Icon">
+      
+                </div>
+      
+                <div class="modal" id="modal">
+                  <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    <h2>Select Language</h2>
+                    <div class="languages">
+                      <div class="language">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English"
+                          class="flag">
+                        <p>English</p>
+                      </div>
+                      <div class="language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_China.svg" alt="Chinese"
+                          class="flag">
+                        <p>Chinese</p>
+                      </div>
+                      <div class="language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg" alt="Malaysian"
+                          class="flag">
+                        <p>Malaysian</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toggle-button" onclick="toggleNavbar()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </div>
+          </nav>
+        </header>
+  
+
+      <div class="agent-body">
+        <div class="containert">
+          <div class="imgcontainer">
+            <img src="img/poker_login_agent.png" alt="image">
+          </div>
+          
+          <div class="login-container">
+            <div class="login-form">
+              <div class="left-spinner"></div>
+              <div class="right-spinner"></div>
+              <div class="logo-container">
+                <img src="img/poker_logo.png" alt="Logo">
+              </div>
+              <!-- <h3 class="player">AGENT LOGIN</h3> -->
+              <form id="loginForm">
+                <label for="username" class="icons">AGENT LOGIN </label>
+                <span class="material-symbols-outlined">
+                  person
+                  </span>
+                <input type="text" id="username" name="username" required placeholder="Username/ Phone No./ Email">
+      
+                <!-- <label for="password">Password</label> -->
+                <span class="material-symbols-outlined">
+                  lock
+                  </span>
+                <input type="password" id="password" name="password" required placeholder="Password">
+                <div class="options">
+                  <label><input type="checkbox" name="remember" id="remember"> Remember me</label>
+                  <a href="#" id="forgotPassword">Forgot Password?</a>
+                </div>
+                <button type="submit">LOGIN</button>
+              </form>
+            </div>
+          </div>
+
+      </div>
+    </div>
+</div>
+
+  
+
+
+
+  <script>
+    //nav toggle btn
+    function toggleNavbar() {
+      var navList = document.querySelector('.nav-list');
+      navList.classList.toggle('show');
+    }
+  </script>
+  <script>
+    document.getElementById('languageIcon').addEventListener('click', function () {
+      document.getElementById('modal').style.display = 'flex';
+    });
+
+    document.getElementById('closeModal').addEventListener('click', function () {
+      document.getElementById('modal').style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+      if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+      }
+    });
+
+  </script>
+</body>
+
+</html>

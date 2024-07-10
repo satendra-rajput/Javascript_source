@@ -11,7 +11,21 @@
 </head>
 
 <body>
+        <div id="modal_success" class="modal_success">
+            <div class="modal-content-success">
+                <span class="star">⭐</span>
+                <h2>Awesome!</h2>
+                <p>Your booking has been confirmed.</p>
+                <a href="">
+                <button id="okBtn" class="ok-btn">Ok</button>
+                </a>
+            </div>
+        </div>
+    
     <div class="add-container">
+
+       
+
         <div class="add-row">
             <div class="add-top">
                 <button><span class="material-symbols-outlined">
@@ -85,8 +99,8 @@
             </div>
 
 
-                <div class="add-total">
-                    <button type="button">Next</button>
+                <div class="add-total-recipient">
+                    <button type="button" id="showModalBtn">Next</button>
                     <div class="add-total-item">
                         <p style="padding-right: 100px;">Total GP</p>
                         <p>GP 600000</p>
@@ -94,6 +108,33 @@
                 </div>
             
         </div>
+
+<!-- <scrip src="recipientpop.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    var showModalBtn = document.getElementById('showModalBtn');
+    var modal_Ver = document.getElementById('modal_success');
+    var okBtn = document.getElementById('okBtn');
+
+    // Show the modal when the button is clicked
+    showModalBtn.addEventListener('click', function () {
+        modal_Ver.style.display = 'flex';
+    });
+
+    // Hide the modal when the OK button is clicked
+    okBtn.addEventListener('click', function () {
+        modal_Ver.style.display = 'none';
+    });
+
+    // Hide the modal when clicking outside of it
+    window.addEventListener('click', function (event) {
+        if (event.target === modal_Ver) {
+            modal_Ver.style.display = 'none';
+        }
+    });
+});
+
+    </script>
 </body>
 
 </html>

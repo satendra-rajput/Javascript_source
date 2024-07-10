@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="friend-list.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Friend List</title>
+</head>
+
+<body>
+    <div class="friend-profile-container">
+        <div class="friend-profile-row">
+            <div class="profile-banner-heading">Profile</div>
+
+
+            <div class="friend-edit">
+                <div class="friend-edit-link"><a href=""><span class="material-symbols-outlined">
+                            arrow_back_ios
+                        </span></a></div>
+                <div class="friend-edit-link"><a href="">Edit Profile</a></div>
+            </div>
+
+            <div class="searching-container">
+                <div class="searching-text">
+                    <p style="color: #275aca;">Your Friend</p>
+                    <p style="color: #646969;">Friend Requests</p>
+                </div>
+
+                <div class="searching-box">
+                    <span class="material-symbols-outlined  searchIcons">
+                        search
+                    </span>
+                    <input type="text" name="" id="" placeholder="Search">
+                </div>
+            </div>
+
+            <div class="friend-list-heading">25 Friend</div>
+            <div class="friend-list-container">
+                <div class="friend-list-data">
+                    <div class="friend-list-icons">
+                        <span class="material-symbols-outlined IconsList">
+                            account_circle
+                        </span>
+                        <p>ABCD</p>
+                    </div>
+
+                    <div class="friend-list-button">
+                        <button type="button" class="clickable" onclick="openModal(event)">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="friend-list-data">
+                    <div class="friend-list-icons">
+                        <span class="material-symbols-outlined IconsList">
+                            account_circle
+                        </span>
+                        <p>ABCD</p>
+                    </div>
+
+                    <div class="friend-list-button">
+                        <button type="button" class="clickable" onclick="openModal(event)">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="friend-list-data">
+                    <div class="friend-list-icons">
+                        <span class="material-symbols-outlined IconsList">
+                            account_circle
+                        </span>
+                        <p>ABCD</p>
+                    </div>
+
+                    <div class="friend-list-button">
+                        <button type="button" class="clickable" onclick="openModal(event)">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="friend-list-data">
+                    <div class="friend-list-icons">
+                        <span class="material-symbols-outlined IconsList">
+                            account_circle
+                        </span>
+                        <p>ABCD</p>
+                    </div>
+
+                    <div class="friend-list-button">
+                        <button type="button" class="clickable" id="element4">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="friend-list-data">
+                    <div class="friend-list-icons">
+                        <span class="material-symbols-outlined IconsList">
+                            account_circle
+                        </span>
+                        <p>ABCD</p>
+                    </div>
+
+                    <div class="friend-list-button">
+                        <button type="button" class="clickable" id="element5">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="friend-list-data">
+                    <div class="friend-list-icons">
+                        <span class="material-symbols-outlined IconsList">
+                            account_circle
+                        </span>
+                        <p>ABCD</p>
+                    </div>
+
+                    <div class="friend-list-button">
+                        <button type="button" class="clickable" id="element6">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="friend-list-data">
+                    <div class="friend-list-icons">
+                        <span class="material-symbols-outlined IconsList">
+                            account_circle
+                        </span>
+                        <p>ABCD</p>
+                    </div>
+
+                    <div class="friend-list-button">
+                        <button type="button" class="clickable" id="element7">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="friend-list-data">
+                    <div class="friend-list-icons">
+                        <span class="material-symbols-outlined IconsList">
+                            account_circle
+                        </span>
+                        <p>ABCD</p>
+                    </div>
+
+                    <div class="friend-list-button">
+                        <button type="button" class="clickable" id="element8">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="friend-list-data">
+                    <div class="friend-list-icons">
+                        <span class="material-symbols-outlined IconsList">
+                            account_circle
+                        </span>
+                        <p>ABCD</p>
+                    </div>
+
+                    <div class="friend-list-button">
+                        <button type="button" class="clickable" id="element9">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <div class="pop-botton">
+                <button type="button">Delete</button>
+                <button type="button">Transfer</button>
+                <button type="button">Edit</button>
+            </div>
+        </div>
+        <div class="pointer" id="popupPointer"></div>
+    </div> -->
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="pop-botton">
+                <button type="button">Delete</button>
+                <button type="button">Transfer</button>
+                <button type="button">Edit</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <script src="friend-list.js"></script> -->
+    <script>
+       
+       function openModal(event) {
+    const popup = document.getElementById('popup');
+    const popupContent = popup.querySelector('.popup-content');
+    
+    // Get the coordinates of the clicked element
+    const rect = event.target.getBoundingClientRect();
+    
+    // Calculate position for popup
+    const left = rect.left + (rect.width / 2) - (popupContent.offsetWidth / 2);
+    const top = rect.top + window.scrollY + rect.height;
+
+    // Set position for popup
+    popupContent.style.left = `${left}px`;
+    popupContent.style.top = `${top}px`;
+
+    // Show popup
+    popup.style.display = 'flex';
+}
+
+function closeModal() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
+    </script>
+</body>
+
+</html>

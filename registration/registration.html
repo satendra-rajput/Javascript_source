@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="login.css" />
+    <!-- Include CSS for intl-tel-input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/css/intlTelInput.css">
+
+    <!-- Include JS for intl-tel-input -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/js/intlTelInput.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" />
+    <title>Responsive Login Page</title>
+
+    <link rel="stylesheet" href="language.css">
+    <link rel="stylesheet" href="registration.css">
+</head>
+<style>
+    .language-icon {
+        font-size: 30px;
+        cursor: pointer;
+        position: relative;
+        bottom: 1px;
+        /* right: 20px; */
+        border-radius: 50%;
+        z-index: 1000;
+    }
+
+    .containner {
+        padding: 42px 0px;
+    }
+
+
+    .input-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+
+    input[type="email"] {
+        width: 94%;
+        margin-bottom: 25px;
+    }
+
+
+
+    .iti--allow-dropdown input,
+    .iti--allow-dropdown input[type=text],
+    .iti--allow-dropdown input[type=tel],
+    .iti--separate-dial-code input,
+    .iti--separate-dial-code input[type=text],
+    .iti--separate-dial-code input[type=tel] {
+        /* padding-right: 6px; */
+        padding-left: 65px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .iti {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 10px;
+        width: 100%;
+        border: 0;
+        outline: 0;
+        background-color: var(--color-white);
+
+        border-radius: var(--br-8xs);
+        flex-direction: row;
+        /* padding: 16.30000000000001px var(--padding-6xl) 16.19999999999999px; */
+        box-sizing: border-box;
+        font-family: var(--font-montserrat);
+        font-weight: 600;
+        font-size: var(--font-size-lgi);
+        color: var(--color-gray-200);
+        min-width: 250px;
+
+    }
+
+    .resend-button:hover {
+        background: #0056b3;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+
+    @media screen and (max-width: 450px) {
+        .red-background {
+
+            height: 1050px;
+        }
+
+        .form-container {
+            padding: 20px;
+
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 480px;
+            margin: auto 12px;
+            /* background: linear-gradient(141.73deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)); */
+            backdrop-filter: blur(4px);
+            position: relative;
+            bottom: 70px;
+        }
+
+        .iti__selected-flag {
+    height: 90%;
+}
+        .form-content.active {
+            display: block;
+           
+        }
+
+        .enter-o-t-p-code {
+            padding: 0 !important;
+        }
+
+        .form-title {
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-align: start;
+        }
+
+        .form-container {
+            margin: 100px 12px;
+        }
+
+        .containner {
+            padding: 0px 0px;
+        }
+    }
+</style>
+
+<body>
+    <div class="background-image"></div>
+    <header>
+        <nav class="navbar m-auto">
+            <ul class="nav-list">
+
+                <!-- <li><a href="" class="current">Admin</a></li> -->
+                <li><a href="/agent_login.html" class="current">Agent</a></li>
+
+
+            </ul>
+            <div class="nav_btn_flexbox">
+                <div class="btn-cashback">
+                    <div class="language-icon" id="languageIcon">
+                        <img src="/img/ion_earth.png" alt="Language Icon">
+
+                    </div>
+
+                    <div class="modal" id="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeModal">&times;</span>
+                            <h2>Select Language</h2>
+                            <div class="languages">
+                                <div class="language">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                                        alt="English" class="flag">
+                                    <p>English</p>
+                                </div>
+                                <div class="language">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_China.svg"
+                                        alt="Chinese" class="flag">
+                                    <p>Chinese</p>
+                                </div>
+                                <div class="language">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg"
+                                        alt="Malaysian" class="flag">
+                                    <p>Malaysian</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle-button" onclick="toggleNavbar()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="containner">
+        <div class="form-container">
+            <h2 class="form-title">Player Registration Form</h2>
+            <form onsubmit="event.preventDefault(); submitForm();">
+                <div class="form-groupp">
+                    <label for="referrer-code">Referrer Code:</label>
+                    <div class="referrer-container">
+                        <span id="referrer-code-text" class="referrer-code">CAC569</span>
+                        <div class="check-icon" title="Referrer Code Confirmed"></div>
+                    </div>
+                </div>
+
+                <div class="form-grouup">
+                    <label for="user-id">User ID:</label>
+                    <input type="text" id="user-id" placeholder="Player Registration ID">
+                    <div id="user-id-error" class="error-message"></div>
+                </div>
+
+
+                <div class="formgrp1">
+                    <div class="form-group">
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" id="full-name" placeholder="Enter your full name">
+                        <div class="verify-text">Real Name or Withdrawals verify</div>
+                        <div id="full-name-error" class="error-message"></div>
+                    </div>
+
+                    <div class="dob-container">
+                        <label for="dob">DOB</label>
+                        <input type="date" id="dob" name="dob">
+                        <div class="verify-text">Must over 18 year</div>
+                    </div>
+
+                </div>
+
+                <div class="formgrp2">
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <div id="password-error" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm your password">
+                        <div id="confirm-password-error" class="error-message"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="container">
+                    <!-- <div class="tabs">
+                        <button id="mobile-tab" class="tab-button active" onclick="showTab('mobile')">Mobile</button>
+                        <button id="email-tab" class="tab-button" onclick="showTab('email')">Email</button>
+                    </div> -->
+                    <div class="tabs">
+                        <label>
+                            <input type="radio" name="tab" id="mobile-tab" class="tab-button"
+                                onclick="showTab('mobile')" checked>
+                            Mobile
+                        </label>
+                        <label>
+                            <input type="radio" name="tab" id="email-tab" class="tab-button" onclick="showTab('email')">
+                            Email
+                        </label>
+                    </div>
+
+                    <div id="mobile-form" class="form-content">
+                        <!-- <label for="mobile">Mobile Number:</label> -->
+                        <input type="tel" id="mobile" placeholder="Enter your mobile number">
+                        <!-- <label for="mobile-otp">OTP:</label> -->
+                        <div class="input-group">
+                            <!-- <input type="text" id="mobile-otp" placeholder="Enter OTP"> -->
+                            <div class="btn8">
+                                <button id="resend-mobile-otp" class="resend-button">SMS OTP</button>
+                                <button id="resend-mobile-otp" class="resendd-button"><img
+                                        src="/img/icons8-whatsapp.svg" style="height: 26px;">OTP</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="email-form" class="form-content hidden">
+                        <!-- <label for="email">Email:</label> -->
+                        <input type="email" id="email" placeholder="Enter your email">
+                        <!-- <label for="email-otp">OTP:</label> -->
+                        <!-- <div class="input-group">
+                            <input type="text" id="email-otp" placeholder="Enter OTP">
+                            <button id="resend-email-otp" class="resend-button">Resend OTP</button>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- <button type="submit" class="verify-button">SEND OTP</button> -->
+                <button id="sendOtpBtn" class="verify-button">SEND OTP</button>
+            </form>
+        </div>
+
+        <!-- end  -->
+    </div>
+
+
+
+    <!-- OTP Modal -->
+    <div id="otpModal" class="modal">
+        <div class="modal-content" id="modalll">
+            <span class="close" data-close="otpModal">&times;</span>
+            <h2 style="color: #265cd2;">Verify Your Mobile Number</h2>
+            <p>We have sent the verification code to your mobile number.</p>
+            <div class="textflex">
+            <input type="texttt" id="otpInput1" maxlength="1">
+            <input type="texttt" id="otpInput2" maxlength="1">
+            <input type="texttt" id="otpInput3" maxlength="1">
+            <input type="texttt" id="otpInput4" maxlength="1">
+        </div>
+            <div class="resend-code-container">
+                <div class="resenddd-button">Resend Code</div>
+            </div>
+            <button id="confirmOtpBtn">CONFIRM</button>
+            <button id="resendOtpBtn">CANCEL</button>
+        </div>
+    </div>
+
+  
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content" id="modalll">
+            <span class="close" data-close="successModal">&times;</span>
+            <div class="blueicn">
+                <img src="/img/icon-click.png" style="height: 130px;" alt="tick">
+            </div>
+            <h2 class="blue-heading">Password Update</h2>
+            <p style="font-size: 12px;">Password has been updated.</p>
+            <button id="loginBtn">Go to Dashboard</button>
+        </div>
+    </div>
+    <!-- otp modal end -->
+
+    <script>
+        //nav toggle btn
+        function toggleNavbar() {
+            var navList = document.querySelector('.nav-list');
+            navList.classList.toggle('show');
+        }
+    </script>
+    <script>
+        document.getElementById('languageIcon').addEventListener('click', function () {
+            document.getElementById('modal').style.display = 'flex';
+        });
+
+        document.getElementById('closeModal').addEventListener('click', function () {
+            document.getElementById('modal').style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target === document.getElementById('modal')) {
+                document.getElementById('modal').style.display = 'none';
+            }
+        });
+
+    </script>
+
+
+    <script>
+        function validateForm() {
+            // Clear previous error messages
+            document.querySelectorAll('.error-message').forEach(el => el.innerText = '');
+
+            let valid = true;
+
+            // Validate User ID
+            const userId = document.getElementById('user-id').value;
+            if (userId.trim() === '') {
+                document.getElementById('user-id-error').innerText = 'User ID is required.';
+                valid = false;
+            }
+
+            // Validate Password
+            const password = document.getElementById('password').value;
+            if (password.trim() === '') {
+                document.getElementById('password-error').innerText = 'Password is required.';
+                valid = false;
+            }
+
+            // Validate Confirm Password
+            const confirmPassword = document.getElementById('confirm-password').value;
+            if (confirmPassword.trim() === '') {
+                document.getElementById('confirm-password-error').innerText = 'Confirm Password is required.';
+                valid = false;
+            } else if (password !== confirmPassword) {
+                document.getElementById('confirm-password-error').innerText = 'Passwords do not match.';
+                valid = false;
+            }
+
+            // Validate Full Name
+            const fullName = document.getElementById('full-name').value;
+            if (fullName.trim() === '') {
+                document.getElementById('full-name-error').innerText = 'Full Name is required.';
+                valid = false;
+            }
+
+            return valid;
+        }
+
+        function submitForm() {
+            if (validateForm()) {
+                alert('Form submitted successfully!');
+                // Actual form submission logic can go here
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize intl-tel-input for the mobile input field
+            const input = document.querySelector("#mobile");
+            const iti = window.intlTelInput(input, {
+                initialCountry: "in", // Set the initial country to India
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/js/utils.js"
+            });
+
+            // Default to mobile tab
+            showTab('mobile');
+        });
+
+        function showTab(tab) {
+            const mobileForm = document.getElementById('mobile-form');
+            const emailForm = document.getElementById('email-form');
+            const mobileTab = document.getElementById('mobile-tab');
+            const emailTab = document.getElementById('email-tab');
+
+            if (tab === 'mobile') {
+                mobileForm.classList.add('active');
+                emailForm.classList.remove('active');
+                mobileTab.classList.add('active');
+                emailTab.classList.remove('active');
+            } else {
+                mobileForm.classList.remove('active');
+                emailForm.classList.add('active');
+                mobileTab.classList.remove('active');
+                emailTab.classList.add('active');
+            }
+        }
+
+        document.getElementById('resend-mobile-otp').addEventListener('click', function () {
+            alert('Resending mobile OTP...');
+            // Add actual resend OTP logic here
+        });
+
+        document.getElementById('resend-email-otp').addEventListener('click', function () {
+            alert('Resending email OTP...');
+            // Add actual resend OTP logic here
+        });
+
+    </script>
+
+
+    <script>
+        // script.js
+        
+        // Event listener for "Send OTP" button
+        document.getElementById('sendOtpBtn').addEventListener('click', function () {
+            document.getElementById('otpModal').style.display = 'block';
+        });
+        
+        // Event listener for "Confirm OTP" button
+        document.getElementById('confirmOtpBtn').addEventListener('click', function () {
+            document.getElementById('otpModal').style.display = 'none';
+            document.getElementById('successModal').style.display = 'block'; // Directly show success modal
+        });
+        
+        // Remove the "Submit Password" button click event listener
+        // No need to handle password input or comparison
+        
+        // Event listener for "Login" button
+        document.getElementById('loginBtn').addEventListener('click', function () {
+            document.getElementById('successModal').style.display = 'none';
+            alert("Redirecting to login page...");
+        });
+        
+        // Close the modal when clicking on the close icon
+        document.querySelectorAll('.close').forEach(function (closeIcon) {
+            closeIcon.addEventListener('click', function () {
+                let modalId = this.getAttribute('data-close');
+                document.getElementById(modalId).style.display = 'none';
+            });
+        });
+        </script>
+        
+</body>
+
+</html>

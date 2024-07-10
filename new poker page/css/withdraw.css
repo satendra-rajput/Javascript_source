@@ -1,0 +1,556 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.withdrawmain{
+    display: flex;
+    gap: 25px;
+    height: auto;
+    background-color: white;
+    padding: 12px;
+}
+.main-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100%;
+    width: 85%;
+}
+
+.center-div {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.button-group button {
+    /* display: block;
+   
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .5s ease;
+    text-align: center;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    cursor: pointer;
+    width: 130px;
+    padding: 30px;
+}
+.inputmainflex{
+    display:flex ;
+}
+.details {
+    /* display: flex;
+    justify-content: space-between; */
+    width: 100%;
+}
+
+.details-left,
+.details-right {
+    /* width: 45%; */
+    text-align: left;
+}
+
+.bank-details,
+.tng-details,
+.crypto-details {
+    margin-bottom: 20px;
+}
+
+.rollover-target {
+    margin-bottom: 10px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    color: blue;
+    margin-right: 10px;
+}
+
+
+
+.amount-buttons button {
+    margin: 5px;
+    width: 68px;
+    padding: 6px 6px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 16px;
+    background-color: #245bd9;
+    color: white;
+}
+
+#submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #245bd9;
+    color: white;
+}
+.input-group {
+    position: relative;
+    width: fit-content; /* Ensure the container only takes up the necessary width */
+    width: 100%;
+}
+
+.currency-prefix {
+    position: absolute;
+    left: 10px; /* Adjust the position as needed */
+    top: 50%;
+    font-weight: 700;
+    transform: translateY(-50%);
+    color: blue; /* Change this to your desired blue color */
+    font-size: 17px; /* Adjust font size as needed */
+    pointer-events: none; /* Ensure it doesn't interfere with input clicks */
+}
+
+.input-group input[type="text"] {
+    padding-left: 39px; /* Add padding to accommodate the prefix */
+    width: 100%;
+    padding-right: 10px; /* Adjust right padding if needed */
+    height: 35px; /* Adjust height as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border: 2px solid blue;
+    border-radius: 12px;
+}
+.sbmtwithdrw{
+    position: relative;
+    left: 42px;
+}
+.bank-details strong{
+    color: blue;
+}
+/* Spacing class to add margin and padding */
+.spacing {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.custom-line {
+    border: 0;
+    height: 2px; /* Adjust the thickness of the line */
+    background: #ccc; /* Set the color to #ccc */
+}
+
+.announcement {
+  text-align: start;
+  margin: 8px 0px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 20px 0;
+}
+.line {
+    margin: 4px 0;
+    font-size: 16px;
+    color: #555;
+    text-align: justify;
+}
+
+
+.payment-gateway-header {
+    cursor: pointer;
+   
+    /* background-color: #f0f0f0;
+    border: 1px solid #ccc; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #245bd9;
+    font-weight: 700;
+}
+
+.payment-gateways {
+    display: none;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.gateway {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.gateway img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.gateway p {
+    margin: 0;
+}
+
+.gateway2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0px;
+}
+.smllhedng{
+    color: #245bd9;
+}
+.pymtheadng{
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+@media screen and (max-width:992px) {
+    
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    .main-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .center-div {
+        background: #f8f8f8;
+        padding: 0px;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .withdrawmain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        height: auto;
+        background-color: white;
+        padding: 0px 10px;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0px;
+        margin-left: -100px;
+    }
+
+    .button-group button {
+        transition: all .5s ease;
+        text-align: center;
+        background-color: #f2f2f2;
+        border: 1px solid #00f;
+        cursor: pointer;
+        width: 80px;
+        height: 6px;
+        padding: 20px 0px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-left: 0px;
+    }
+
+    .details {
+        width: 95%;
+        border: 1.5px solid #00f;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .payment-gateway-header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 0px;
+        color: #245bd9;
+        font-weight: 700;
+    }
+
+    .payment-gateways {
+        display: none;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .inputmainflex {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .amount-buttons{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .amount-buttons button {
+        margin: 5px;
+        width: 68px;
+        padding: 6px 5px;
+        font-size: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 16px;
+        background-color: #245bd9;
+        color: white;
+    }
+    .sbmtwithdrw {
+        position: relative;
+        left: 8px;
+    }
+
+    .announcement {
+        text-align: start;
+        margin: 8px 15px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .main-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .center-div {
+        background: #f8f8f8;
+        padding: 0px;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .withdrawmain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        height: auto;
+        background-color: white;
+        padding: 0px 10px;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0px;
+        margin-left: -100px;
+    }
+
+    .button-group button {
+        transition: all .5s ease;
+        text-align: center;
+        background-color: #f2f2f2;
+        border: 1px solid #00f;
+        cursor: pointer;
+        width: 80px;
+        height: 6px;
+        padding: 20px 0px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-left: 0px;
+    }
+
+    .details {
+        width: 95%;
+        border: 1.5px solid #00f;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .payment-gateway-header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 0px;
+        color: #245bd9;
+        font-weight: 700;
+    }
+
+    .payment-gateways {
+        display: none;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .inputmainflex {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .amount-buttons{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .amount-buttons button {
+        margin: 5px;
+        width: 68px;
+        padding: 6px 5px;
+        font-size: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 16px;
+        background-color: #245bd9;
+        color: white;
+    }
+    .sbmtwithdrw {
+        position: relative;
+        left: 8px;
+    }
+
+    .announcement {
+        text-align: start;
+        margin: 8px 15px;
+    }
+}
+
+
+@media screen and (max-width:350px) {
+    .main-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .center-div {
+        background: #f8f8f8;
+        padding: 0px;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .withdrawmain {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+        height: auto;
+        background-color: white;
+        padding: 0px 10px;
+    
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0px;
+        margin-left: 8px;
+    }
+
+    .button-group button {
+        transition: all .5s ease;
+        text-align: center;
+        background-color: #f2f2f2;
+        border: 1px solid #00f;
+        cursor: pointer;
+        width: 80px;
+        height: 6px;
+        padding: 20px 0px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-left: 0px;
+    }
+
+    .details {
+        width: 95%;
+        border: 1.5px solid #00f;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .payment-gateway-header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px;
+        color: #245bd9;
+        font-weight: 700;
+    }
+
+    .payment-gateways {
+        display: none;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .inputmainflex {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .amount-buttons{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .amount-buttons button {
+        margin: 5px;
+        width: 68px;
+        padding: 6px 0px;
+        font-size: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 16px;
+        background-color: #245bd9;
+        color: white;
+    }
+    .sbmtwithdrw {
+        position: relative;
+        left: 5px;
+    }
+
+    .announcement {
+        text-align: start;
+        margin: 8px 15px;
+
+
+        background-color: #0000ff33;
+    }
+}
+
+
+
+

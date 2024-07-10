@@ -1,0 +1,548 @@
+.containner {
+    padding: 42px 0px;
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 5px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    max-width: 480px;
+    margin: auto;
+    /* background: linear-gradient(141.73deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)); */
+    backdrop-filter: blur(4px);
+
+    color: #4167b2;
+
+    background-color: #f8f8f8 ;
+   
+    box-shadow: 0 4px 30px rgba(36, 30, 30, 0.1);
+
+}
+.textflex{
+    display: flex;
+    gap: 7px;
+}
+.form-group .error-message {
+    color: red;
+    font-size: 12px;
+    /* Set error font size to 12px */
+    margin-top: 5px;
+}
+
+/* .form-group {
+    margin-bottom: 15px;
+} */
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.iti__selected-flag {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 74%;
+    padding: 0 6px 0 8px;
+}
+.referrer-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+    text-align: center;
+}
+.form-groupp{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.referrer-code {
+    margin-right: 4px;
+    font-weight: bold;
+    font-size: 1em;
+    color: black;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4167b2;
+}
+
+.check-icon {
+    width: 16px;
+    height: 16px;
+    background: url('https://img.icons8.com/ios-filled/50/000000/checkmark.png') no-repeat center center;
+    background-size: contain;
+}
+.btn8{
+    display: flex;
+}
+
+
+.resend-code-container {
+    text-align: left;
+}
+
+#modalll{
+    background-color: #f8f8f8 !important;
+}
+input[type="tel"],
+    input[type="email"],
+    input[type="textt"] {
+        width: 17%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        color: black;
+    }
+    input[type="texttt"] {
+    width: 17%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    text-align: center;
+    color: black;
+    }
+
+
+    input[type="email"] {
+        width: 94%;
+    }
+
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+    }
+
+    .modal-content {
+        
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+    }
+
+
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* button {
+        padding: 10px 20px;
+        background-color: #265cd2;
+        color: white;
+        border: none;
+        cursor: pointer;
+    } */
+
+    #confirmOtpBtn {
+        padding: 10px 20px;
+        background-color: #265cd2;
+        color: white;
+        border: none;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    #resendOtpBtn {
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #a1a1a1;
+
+        width: 100%;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    #submitPasswordBtn {
+        padding: 10px 20px;
+        background-color: #265cd2;
+        color: white;
+        border: none;
+        width: 75%;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    #loginBtn {
+        padding: 10px 20px;
+        background-color: #265cd2;
+        color: white;
+        border: none;
+        width: 75%;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .iti__flag-box, .iti__country-name {
+    margin-right: 6px;
+    color: black;
+}
+    .blue-heading {
+        color: #2196F3;
+        margin: 0;
+        display: inline-block;
+    }
+
+      input[type="tel"],
+    input[type="email"],
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid #4167b2;
+    border-radius: 10px;
+   
+}
+
+.verify-text {
+    font-size: 0.75em;
+    /* color: #6c757d; */
+    margin-top: 5px;
+}
+
+.verify-button {
+    display: block;
+    width: 35%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 40px !important;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.verify-button:hover {
+    background-color: #0056b3;
+}
+.dob-container {
+    /* background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; */
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input[type="date"] {
+    padding: 9px;
+    font-size: 14px;
+    border: 2px solid #4167b2;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="date"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+.formgrp1{
+    display: flex; /* Use flexbox to align items horizontally */
+    gap: 20px; /* Add space between the fields */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.form-grouup {
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    /* margin-bottom: 15px; */
+}
+.resenddd-button {
+    background-color: transparent;
+    color: blue;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    margin: 18px 5px;
+}
+
+
+.dob-container {
+    display: flex;
+    flex-direction: column;
+    width: 230px; /* Adjust width as needed */
+}
+
+label, input, .verify-text, .error-message {
+    margin-bottom: 5px; /* Add margin for spacing */
+}
+
+input {
+    padding: 5px; /* Add padding for better visual */
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.verify-text {
+    font-size: 12px;
+    color: #797979; /* Light grey for the verification text */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 12px;
+    gap: 30px;
+}
+
+.formgrp2{
+    display: flex; /* Use flexbox to align items horizontally */
+    gap: 20px; /* Add space between the fields */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 230px; /* Adjust width as needed */
+}
+
+label, input, .error-message {
+    margin-bottom: 5px; /* Add margin for spacing */
+    display: flex;
+}
+
+input {
+    padding: 5px; /* Add padding for better visual */
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+
+.tab-button {
+    width: 45%;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+   
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.tab-button.active {
+    background: #265cd2;
+    color: #fff;
+}
+
+.form-content {
+    display: none;
+}
+
+.form-content.active {
+    display: block;
+    display: flex;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+input[type="tel"],
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #4167b2;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+input[type="email"]{
+    width: 94%;
+}
+
+.resend-button {
+    padding: 4px 30px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 11px;
+    height: 38px;
+   text-wrap: nowrap;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.resendd-button {
+    padding: 4px 30px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    
+    justify-content: center;
+    border-radius: 4px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+}
+
+
+.resend-button:hover {
+    background: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media screen and (max-width: 450px) {
+    .red-background {
+
+        height: 1050px;
+    }
+
+    .form-grouup {
+        display: flex;
+        flex-direction: column;
+        width: 41%;
+        /* margin-bottom: 15px; */
+    }
+    .btn8{
+        display: flex;
+    }
+    
+    .form-container {
+        padding: 20px;
+
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 480px;
+        margin: auto 12px;
+        /* background: linear-gradient(141.73deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)); */
+        backdrop-filter: blur(4px);
+        position: relative;
+        bottom: 70px;
+    }
+
+    .enter-o-t-p-code {
+        padding: 0 !important;
+    }
+
+    .form-title {
+        margin-bottom: 20px;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .form-container {
+        margin: 100px 12px;
+    }
+
+    .containner {
+        padding: 0px 0px;
+    }
+  
+
+}
+
+@media screen and (max-width: 430px) {
+    .btn8{
+        display: flex;
+       
+    }
+    .resend-button {
+        padding: 4px 62px;
+    }
+    
+    .resendd-button {
+        padding: 4px 62px;
+    }
+}
+@media screen and (max-width: 413px) {
+    .btn8{
+        display: flex;
+       
+    }
+    .resend-button {
+        padding: 4px 58px;
+    }
+    
+    .resendd-button {
+        padding: 4px 58px;
+    }
+}
+@media screen and (max-width: 390px) {
+    .btn8{
+        display: flex;
+       
+    }
+    .resend-button {
+        padding: 4px 52px;
+    }
+    
+    .resendd-button {
+        padding: 4px 52px;
+    }
+}
+
+
+
+@media screen and (max-width: 360px) {
+    .resend-button {
+        padding: 4px 46px;
+    }
+    
+    .resendd-button {
+        padding: 4px 46px;
+    }
+}

@@ -1,0 +1,599 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    background: #eeebe7;
+}
+.friend-profile-container{
+    width: 100%;
+    height: 100%
+}
+.friend-profile-row{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.profile-banner-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #275ecb;
+    letter-spacing: 2px;
+    padding: 10px 0px;
+}
+
+
+.friend-edit{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px 0px;
+    gap: 50px;
+}
+.friend-edit-link a{
+    text-decoration: none;
+    color: #275aca;
+    font-size: 25px;
+    font-weight: 600;
+}
+.friend-edit-link a span{ 
+   display: block;
+}
+
+.searching-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searching-text{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 100px;
+}
+.searching-text p{
+    font-size: 22px;
+text-shadow: 0px 0px 1px #000;
+}
+
+.searching-box{
+    display: flex;
+    position: relative;
+    margin-right: 11%;
+}
+
+
+.searching-box input{
+    width: 300px;
+    height: 40px;
+    border-radius: 14px;
+    outline: none;
+    border: 2px solid #275aca;
+    padding-left: 40px;
+    font-size: 18px;
+}
+
+.searchIcons{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+.friend-list-heading{
+    text-align: left;
+    font-size: 18px;
+    color: #275ecb;
+    letter-spacing: 2px;
+    padding: 10px 0px;
+    text-shadow: 0px 0px 1px #000;
+}
+
+
+.friend-list-container{
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0px;
+}
+
+.friend-list-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.friend-list-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.IconsList{
+    color: #646457;
+}
+.friend-list-button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.friend-list-button button{
+    border: none;
+    color: #5a5e5d;
+    cursor: pointer;
+    margin-right: 0px;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+.friend-list-button button:hover{
+   opacity: .8;
+}
+
+
+
+
+
+@media screen and (max-width:992px) {
+    .friend-profile-container{
+        width: 100%;
+        height: 100%
+    }
+    .friend-profile-row{
+        width: 90%;
+        height: 100%;
+        margin: auto;
+    }
+    .profile-banner-heading {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+        color: #275ecb;
+        letter-spacing: 2px;
+        padding: 10px 0px;
+    }
+    .friend-edit {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0px 0px;
+        gap: 50px;
+    }
+    .friend-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 25px;
+        font-weight: 600;
+        margin-left: 50px;
+    }
+
+    .friend-edit-link a span {
+        display: block;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+       .searching-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .searching-text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 60px;
+    }
+    .searching-text p {
+        font-size: 16px;
+        text-shadow: 0px 0px 1px #000;
+        padding: 15px 0px;
+    }
+    .searching-box {
+        display: flex;
+        position: relative;
+        margin: 20px 0px;
+    }
+    .searching-box input {
+        width: 190px;
+        height: 40px;
+        border-radius: 14px;
+        outline: none;
+        border: 2px solid #275aca;
+        padding-left: 40px;
+        font-size: 17px;
+    }
+
+    .friend-list-container {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 0px;
+    }
+    .friend-list-button button {
+        border: none;
+        color: #5a5e5d;
+        cursor: pointer;
+        margin-right: 60px;
+    }
+   
+    
+    
+}
+
+@media screen and (max-width:768px) {
+    .friend-profile-container{
+        width: 100%;
+        height: 100%
+    }
+    .friend-profile-row{
+        width: 90%;
+        height: 100%;
+        margin: auto;
+    }
+    .profile-banner-heading {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+        color: #275ecb;
+        letter-spacing: 2px;
+        padding: 10px 0px;
+    }
+    .friend-edit {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0px 0px;
+        gap: 50px;
+    }
+    .friend-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 25px;
+        font-weight: 600;
+        margin-left: 50px;
+    }
+
+    .friend-edit-link a span {
+        display: block;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+       .searching-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .searching-text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 60px;
+    }
+    .searching-text p {
+        font-size: 16px;
+        text-shadow: 0px 0px 1px #000;
+        padding: 15px 0px;
+    }
+    .searching-box {
+        display: flex;
+        position: relative;
+        margin: 20px 0px;
+    }
+    .searching-box input {
+        width: 190px;
+        height: 40px;
+        border-radius: 14px;
+        outline: none;
+        border: 2px solid #275aca;
+        padding-left: 40px;
+        font-size: 17px;
+    }
+
+    .friend-list-container {
+        display: grid;
+
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 0px;
+    }
+    .friend-list-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+    }
+    .friend-list-button button {
+        border: none;
+        color: #5a5e5d;
+        cursor: pointer;
+        margin-right: 60px;
+    }
+
+    
+}
+
+@media screen and (max-width:480px) {
+    .friend-profile-container{
+        width: 100%;
+        height: 100%
+    }
+    .friend-profile-row{
+        width: 90%;
+        height: 100%;
+        margin: auto;
+    }
+    .profile-banner-heading {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        color: #275ecb;
+        letter-spacing: 2px;
+        padding: 10px 0px;
+    }
+
+    .friend-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .friend-edit-link a span {
+        display: block;
+        font-size: 18px;
+    }
+
+       .searching-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .searching-text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 130px;
+    }
+    .searching-text p {
+        font-size: 18px;
+        text-shadow: 0px 0px 1px #000;
+        padding: 15px 0px;
+    }
+    .searching-box {
+        display: flex;
+        position: relative;
+        margin: 20px 0px;
+    }
+    .searching-box input {
+        width: 310px;
+        height: 40px;
+        border-radius: 14px;
+        outline: none;
+        border: 2px solid #275aca;
+        padding-left: 40px;
+        font-size: 17px;
+    }
+    .friend-list-heading {
+        text-align: left;
+        font-size: 18px;
+        color: #275ecb;
+        letter-spacing: 2px;
+        padding: 10px 5px;
+        text-shadow: 0px 0px 1px #000;
+    }
+    
+
+    .friend-list-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 0px;
+        margin-left: 10px;
+    }
+    .friend-list-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+    .friend-list-button button {
+        border: none;
+        color: #5a5e5d;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    
+}
+
+@media screen and (max-width:360px) {
+    .friend-profile-container{
+        width: 100%;
+        height: 100%
+    }
+    .friend-profile-row{
+        width: 90%;
+        height: 100%;
+        margin: auto;
+    }
+    .profile-banner-heading {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        color: #275ecb;
+        letter-spacing: 2px;
+        padding: 10px 0px;
+    }
+
+    .friend-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .friend-edit-link a span {
+        display: block;
+        font-size: 18px;
+    }
+
+       .searching-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .searching-text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 60px;
+    }
+    .searching-text p {
+        font-size: 18px;
+        text-shadow: 0px 0px 1px #000;
+        padding: 15px 0px;
+    }
+    .searching-box {
+        display: flex;
+        position: relative;
+        margin: 20px 0px;
+    }
+    .searching-box input {
+        width: 243px;
+        height: 40px;
+        border-radius: 14px;
+        outline: none;
+        border: 2px solid #275aca;
+        padding-left: 40px;
+        font-size: 17px;
+    }
+
+    .friend-list-container {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 0px;
+    }
+    .friend-list-button button {
+        border: none;
+        color: #5a5e5d;
+        cursor: pointer;
+        margin-right: 60px;
+    }
+   
+}
+
+@media screen and (max-width:320px) {
+    .friend-profile-container{
+        width: 100%;
+        height: 100%
+    }
+    .friend-profile-row{
+        width: 90%;
+        height: 100%;
+        margin: auto;
+    }
+    .profile-banner-heading {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        color: #275ecb;
+        letter-spacing: 2px;
+        padding: 0px 0px;
+    }
+    .friend-edit {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0px 0px;
+        gap: 50px;
+    }
+
+    .friend-edit-link a {
+        text-decoration: none;
+        color: #275aca;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .friend-edit-link a span {
+        display: block;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+       .searching-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .searching-text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 60px;
+    }
+    .searching-text p {
+        font-size: 18px;
+        text-shadow: 0px 0px 1px #000;
+        padding: 15px 0px;
+    }
+    .searching-box {
+        display: flex;
+        position: relative;
+        margin: 20px 0px;
+    }
+    .searching-box input {
+        width: 243px;
+        height: 40px;
+        border-radius: 14px;
+        outline: none;
+        border: 2px solid #275aca;
+        padding-left: 40px;
+        font-size: 17px;
+    }
+
+    .friend-list-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .friend-list-button {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0px;
+    }
+    .friend-list-button button {
+        border: none;
+        color: #5a5e5d;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+}

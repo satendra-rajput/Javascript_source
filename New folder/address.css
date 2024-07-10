@@ -1,0 +1,167 @@
+/* Reset some default styles */
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.address-container {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background: url(img/bg-poker.jpg);
+    background-size: cover;
+    justify-content:space-between;
+    align-items: center;
+    height: 100vh;
+}
+.address-hearder{
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+}
+.cntainer{
+    width: 100%;
+    height: auto;
+}
+.recipient-info{
+    width: 90%;
+    margin: 20px 0px;
+}
+.bag-parent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bag-parent button{
+    border: none;
+    background: transparent;
+    color: #fff;
+}
+
+.form-container {
+    background-image: url(img/jjjjjj.jpg);
+    background-size: cover;
+    border-radius: 50px;
+    padding: 30px 20px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 700px; /* Adjusted max width for better layout */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #a0a4b8;
+}
+
+.form-header .highlight {
+    color: #ffd700;
+}
+
+.address-form .form-group {
+    margin-bottom: 15px;
+}
+
+.address-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.address-form .form-group {
+    flex: 1;
+}
+
+.address-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.address-form input,
+.address-form textarea,
+.address-form select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #eef1f8;
+    color: #333;
+}
+
+.address-form input::placeholder,
+.address-form textarea::placeholder {
+    color: #777;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-buttons button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button {
+    background-color: #fff;
+    color: #333;
+}
+
+.next-button {
+    background-color: #d4af37;
+    color: #fff;
+}
+
+/* Adjusting flag icons in contact field */
+.iti--allow-dropdown {
+    width: 100% !important;
+}
+
+.iti__flag-container {
+    padding-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .cntainer {
+        width: 95%;
+        height: auto;
+    }
+
+    .recipient-info {
+        width: 90%;
+        font-size: 14px;
+        margin: 20px 0px;
+    }
+    
+    .form-container {
+        width: 100%;
+        padding:30px 15px;
+    }
+
+    .address-form .form-row {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

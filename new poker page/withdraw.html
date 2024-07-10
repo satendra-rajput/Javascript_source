@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal Interface</title>
+    <link rel="stylesheet" href="css/withdraw.css">
+    
+</head>
+<style>
+    #paymentGateways {
+        display: none;
+}
+</style>
+<body>
+    <div class="main-container">
+        <div class="center-div">
+            <h2>Withdraw</h2>
+            <div class="withdrawmain">
+                <div class="button-group">
+                    <button onclick="showDetails('bank')">Bank</button>
+                    <button onclick="showDetails('tng')">TNG</button>
+                    <button onclick="showDetails('crypto')">Crypto</button>
+                </div>
+                <div class="details">
+                    <div class="details-left">
+                        <div class="bank-details" id="bank-details">
+                            <div class="spacing"><strong>Bank Name:</strong> <span id="bank-name">ABC Bank</span></div>
+                            <div class="spacing"><strong>Account Name:</strong> <span class="spacing">John Doe</span>
+                            </div>
+                            <div class="spacing"><strong>Account Number:</strong><span class="spacing">123456789</span>
+                            </div>
+                        </div>
+                        <div class="tng-details" id="tng-details" style="display:none;">
+                            <div class="spacing"><strong>TNG Name:</strong> XYZ TNG</div>
+                            <div class="spacing"><strong>Account Name:</strong> Jane Smith</div>
+                            <div class="spacing"><strong>Account Number:</strong> 987654321</div>
+                        </div>
+                        <div class="crypto-details" id="crypto-details" style="display:none;">
+                            <div class="spacing"><strong>Crypto Name:</strong> Bitcoin</div>
+                            <div class="spacing"><strong>Account Name:</strong> CryptoUser</div>
+                            <div class="spacing"><strong>Account Number:</strong> BTC-12345</div>
+                        </div>
+                    </div>
+                    <div class="details-right">
+                        <hr class="custom-line">
+                        <div class="rollover-target">
+                            <strong>Rollover Target:</strong> 368.5/5000
+                        </div>
+                        <div class="payment-gateway-container">
+                            <div class="payment-gateway-header" onclick="toggleGateways()">
+                                Payment Gateway <span class="dropdown-icon">&#9662;</span>
+                            </div>
+                            <div class="payment-gateways" id="paymentGateways">
+                                <div class="gateway">
+                                    <div class="gateway2">
+                                        <img src="/img/Frame 13.svg" alt="Vaderpay">
+                                        <h6 class="pymtheadng">Vaderpay</h6>
+                                    </div>
+                                    <div class="smllhedng">
+                                        <p>Min: MYR 30 , Max: MYR 5,000<br>24 Hours Available</p>
+                                    </div>
+                                </div>
+                                <div class="gateway">
+                                    <div class="gateway2">
+                                        <img src="/img/Frame 14.svg" alt="Bigpayz">
+                                        <h6 class="pymtheadng">Bigpayz</h6>
+                                    </div>
+                                    <div class="smllhedng">
+                                        <p>Min: MYR 50 , Max: MYR 5,000<br>24 Hours Available</p>
+                                    </div>
+                                </div>
+                                <div class="gateway">
+                                    <div class="gateway2">
+                                        <img src="/img/Frame 12.svg" alt="PayEssence">
+                                        <h6 class="pymtheadng">PayEssence</h6>
+                                    </div>
+                                    <div class="smllhedng">
+                                        <p>Min: MYR 50 , Max: MYR 4,999<br>24 Hours Available</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="custom-line">
+                        <div class="inputmainflex">
+                            <div class="inputflex">
+                                <div class="input-group">
+                                    <span class="currency-prefix">RM</span>
+                                    <input type="text" id="amount" placeholder="Enter amount">
+                                </div>
+                                <div class="amount-buttons">
+                                    <button onclick="addAmount(20)">Rm<span>20</span></button>
+                                    <button onclick="addAmount(50)">Rm<span>50</span></button>
+                                    <button onclick="addAmount(100)">Rm<span>100</span></button>
+                                    <button onclick="addAmount(200)">Rm<span>200</span></button>
+                                    <button onclick="addAmount(500)">Rm<span>500</span></button>
+                                </div>
+                            </div>
+                            <div class="sbmtwithdrw">
+                                <button id="submit-btn">Submit</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="announcement">
+                <h6>Heading Announcement</h6>
+
+                <p class="line">-Min Withdraw Amount is $50.00.</p>
+                <p class="line">-Bank account Full name must same.</p>
+                <p class="line">-ps: withdraw request may take longer times (1-2 Hours)to process during peak hour.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showDetails(type) {
+            const bankDetails = document.getElementById('bank-details');
+            const tngDetails = document.getElementById('tng-details');
+            const cryptoDetails = document.getElementById('crypto-details');
+
+            bankDetails.style.display = 'none';
+            tngDetails.style.display = 'none';
+            cryptoDetails.style.display = 'none';
+
+            if (type === 'bank') {
+                bankDetails.style.display = 'block';
+            } else if (type === 'tng') {
+                tngDetails.style.display = 'block';
+            } else if (type === 'crypto') {
+                cryptoDetails.style.display = 'block';
+            }
+        }
+
+        function addAmount(value) {
+            const amountInput = document.getElementById('amount');
+            let currentAmount = parseFloat(amountInput.value) || 0;
+            amountInput.value = currentAmount + value;
+        }
+
+    </script>
+
+<script>
+    function toggleGateways() {
+        const gateways = document.getElementById('paymentGateways');
+        if (gateways.style.display === 'none' || gateways.style.display === '') {
+            if (window.matchMedia('(max-width: 450px)').matches) {
+                gateways.style.display = 'block';
+            } else {
+                gateways.style.display = 'flex';
+            }
+        } else {
+            gateways.style.display = 'none';
+        }
+    }
+
+    function handleMediaQueryChange(event) {
+        const gateways = document.getElementById('paymentGateways');
+        if (event.matches) {
+            if (gateways.style.display === 'flex' || gateways.style.display === 'none') {
+                gateways.style.display = 'block';
+            }
+        } else {
+            if (gateways.style.display === 'block') {
+                gateways.style.display = 'none';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const mediaQuery = window.matchMedia('(max-width: 450px)');
+        mediaQuery.addListener(handleMediaQueryChange);
+        handleMediaQueryChange(mediaQuery); // Initial check
+    });
+    </script>
+</body>
+
+</html>

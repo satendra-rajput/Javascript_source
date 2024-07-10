@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <link rel="stylesheet" href="address.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+</head>
+<style>
+  
+</style>
+<body>
+
+    <div class="address-container">
+        <div class="address-hearder">
+
+        </div>
+
+        <div class="recipient-info">
+            <div class="bag-parent">
+                <button><span class="material-symbols-outlined">
+                        arrow_back_ios
+                    </span></button>
+                <p>BAG------------<span style="color:#dd7e25;">ADDRESS</span> -----------RECIPIENT INFO</p>
+            </div>
+        </div>
+
+        <div class="cntainer">
+            <div class="form-container">
+                <form class="address-form" id="address-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Contact</label>
+                            <input type="tel" id="contact" name="contact" placeholder="+60-3-2456 9876" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Billing Address</label>
+                        <textarea id="address" name="address" placeholder="Address" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="postcode">Post Code</label>
+                            <input type="text" id="postcode" name="postcode" placeholder="000000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="countrySelect">Select Country</label>
+                            <select id="countrySelect" name="countrySelect" required>
+                                <!-- Country options will be populated here dynamically using JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="back-button">Back</button>
+                        <button type="submit" class="next-button"> Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const backButton = document.querySelector('.back-button');
+            const nextButton = document.querySelector('.next-button');
+
+            backButton.addEventListener('click', function () {
+                // Handle back button functionality
+                alert('Back button clicked');
+            });
+
+            nextButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                const form = document.getElementById('address-form');
+
+                // Simple validation
+                if (form.checkValidity()) {
+                    alert('Form is valid, proceed to next step');
+                } else {
+                    alert('Please fill in all required fields');
+                }
+            });
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize the phone input with intl-tel-input
+            const phoneInput = document.querySelector("#contact");
+            const iti = window.intlTelInput(phoneInput, {
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                initialCountry: "auto",
+                geoIpLookup: function (callback) {
+                    fetch('https://ipinfo.io/json?token=<YOUR_API_KEY>', { headers: { 'Accept': 'application/json' } })
+                        .then(resp => resp.json())
+                        .then(json => callback(json.country.toLowerCase()))
+                        .catch(() => callback('us'));
+                }
+            });
+
+            // List of countries
+            const countries = [
+                { name: "United States", code: "us" },
+                { name: "Malaysia", code: "my" },
+                { name: "United Kingdom", code: "gb" },
+                { name: "India", code: "in" },
+                { name: "Australia", code: "au" },
+                { name: "Canada", code: "ca" },
+                // Add more countries as needed
+            ];
+
+            // Populate the country dropdown
+            const countrySelect = document.getElementById("countrySelect");
+            countries.forEach(country => {
+                const option = document.createElement("option");
+                option.value = country.code;
+                option.textContent = country.name;
+                countrySelect.appendChild(option);
+            });
+
+            // Set initial country based on phone input country
+            iti.promise.then(() => {
+                const initialCountryCode = iti.getSelectedCountryData().iso2;
+                const initialCountryOption = countrySelect.querySelector(`option[value=${initialCountryCode}]`);
+                if (initialCountryOption) {
+                    initialCountryOption.selected = true;
+                }
+                document.getElementById("country").value = initialCountryOption.textContent;
+            });
+
+            // Update phone input country code and country name when a country is selected
+            countrySelect.addEventListener("change", () => {
+                const selectedCountryCode = countrySelect.value;
+                iti.setCountry(selectedCountryCode);
+                const selectedCountryName = countrySelect.options[countrySelect.selectedIndex].text;
+                document.getElementById("country").value = selectedCountryName;
+            });
+
+            // Add event listeners for back and next buttons
+            const backButton = document.querySelector('.back-button');
+            const nextButton = document.querySelector('.next-button');
+
+            backButton.addEventListener('click', function () {
+                // Handle back button functionality
+                alert('Back button clicked');
+            });
+
+            nextButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                const form = document.getElementById('address-form');
+
+                // Simple validation
+                if (form.checkValidity()) {
+                    alert('Form submitted');
+                } else {
+                    alert('Please fill out the required fields');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

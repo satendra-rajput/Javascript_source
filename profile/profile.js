@@ -31,25 +31,36 @@ window.onclick = function(event) {
 
 
 function validateForm() {
-  const newPassword = document.getElementById('newPassword').value;
-    const fullName = document.getElementById('fullName').value;
-    const currentPassword = document.getElementById('currentPassword').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    const errorMessage = document.getElementById('errorMessage');
+  
+    const currentPassword = document.getElementById('oldpass').value;
+    const newPassword = document.getElementById('newpass').value;
+    const confirmPassword = document.getElementById('confirm').value;
+    const oldpassError = document.getElementById('oldpassError');
+    const newpassError = document.getElementById('newpassError');
+    const confirmError = document.getElementById('confirmError');
 
-    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-
+    // Regular expression to check for both letters and numbers
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+  
     if (!passwordPattern.test(newPassword)) {
-        errorMessage.textContent = 'New password must contain at least 8 and no more 12 characters.';
+      newpassError.textContent = 'Password must bw 8-12 characters long and contain only letters and number';
         return;
     }
 
     if (newPassword !== confirmPassword) {
-        errorMessage.textContent = 'New password and confirm password do not match.';
+      confirmError.textContent = 'New password and confirm password do not match.';
+        return;
+    }
+    
+    if (newPassword !== currentPassword) {
+      oldpassError.textContent = 'Current password mismatch .';
         return;
     }
 
-    errorMessage.textContent = '';
+    newpassError.textContent = '';
+    confirmError.textContent = '';
+    oldpassError.textContent = '';
     alert('Password changed successfully!');
     document.getElementById('changePasswordForm').reset();
+    
 }

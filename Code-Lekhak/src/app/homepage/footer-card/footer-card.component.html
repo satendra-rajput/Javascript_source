@@ -1,0 +1,62 @@
+<section class="footer">
+    <br>
+    <div class="footer-row">
+        @defer (on viewport) {
+        <div class="footer-col">
+            <a href="" style="text-decoration: none;">
+                <h4>
+                    Code_Lekhak <span style="font-size: 9px">iT Hub Technologies</span>
+                </h4>
+            </a>
+            <p>
+                Code_Lekhak is an online training provider with the most effective learning Programming, Web
+                Development, App
+                Development, Server Side Programming, Big Data-Analytics & Exercises, Quizzes , Mock Text , Live Test,
+                Skills etc..
+            </p>
+            <div class="icons">
+                <i class="fa-brands fa-linkedin"><a href="https://www.linkedin.com/company/codelekhak/"
+                        target="_blank"><img src="assets/icons/linkedin.svg" alt="" width="30px"
+                            height="30px" /></a></i>
+                <i class="fa-brands fa-youtube"><a href="https://www.youtube.com/@code-lekhak" target="_blank"><img
+                            src="assets/icons/youtube.svg" alt="" width="30px" height="30px" /></a></i>
+                <i class="fa-brands fa-facebook-f"><a href="https://www.facebook.com/codelekhak.it"
+                        target="_blank"><img src="assets/icons/facebook.svg" alt="" width="30px"
+                            height="30px" /></a></i>
+                <i class="fa-brands fa-instagram"><a href="https://www.instagram.com/codelekhak/"
+                        target="_blank"><img src="assets/icons/instagram.svg" alt="" width="30px"
+                            height="30px" /></a></i>
+
+                <i class="fa-brands fa-twitter"><a href="https://x.com/CodeLekhak" target="_blank"><img
+                            src="assets/icons/twitter.svg" alt="" width="30px" height="30px" /></a></i>
+            </div>
+        </div>
+
+        @for (footerList of footer_card; track footerList) {
+        <div class="footer-col">
+            <h4>{{footerList.headingName}}</h4>
+            <ul class="links">
+                @for (sub_item of footerList.footer_Lists; track $index) {
+                <li><a [href]="sub_item.listLinks">{{sub_item.listName}}</a></li>
+                }
+            </ul>
+        </div>
+        }
+
+        <div class="footer-col">
+            <h4>Contact us</h4>
+            <ul class="links">
+                <li><a href="">Career <span style="color:green; font-weight: bold;">Hiring</span></a></li>
+                <li><a href=" mailto:info@codelekhak.com">FAQ's</a></li>
+                <li><a href=" mailto:info@codelekhak.com">Supports</a></li>
+                <li><a href="tel:885-975-8708" target="_blank">+91 9953096599</a></li>
+                <li><a href=" mailto:info@codelekhak.com">info&#64;codelekhak.com</a></li>
+            </ul>
+        </div>
+
+        } @placeholder {
+        <div>Loading..</div>
+        }
+    </div>
+    <div class="sub-footer">© Code_Lekhak 2019-2024. All Rights Reserved.</div>
+</section>

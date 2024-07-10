@@ -1,0 +1,39 @@
+// _base.scss
+// CSS Reset (simplified)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  // Base body styles
+  body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $text-color;
+    background-color: $background-color;
+    line-height: 1.6;
+  }
+  .dark-theme {
+    color: $dark-text-color;
+    background-color: $dark-menu-bg-color;
+  }
+  
+  // Links
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Utils CSS List with Class and Id
+.leftmenu ul li a.active {
+  background-color: #26A69A !important;
+  color: #fff !important;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right: 5px;
+}

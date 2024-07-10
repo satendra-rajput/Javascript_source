@@ -1,0 +1,260 @@
+<nav>
+    <div class="wrapper">
+        <div class="logo"><a href="/">
+                <img src="assets/images/homepage/ssbrlo.svg" alt="">
+            </a>
+        </div>
+
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+            <label for="close-btn" class="btn close-btn">
+                <i><mat-icon>close</mat-icon></i>
+            </label>
+            <li><a href="/" class="mobile-item">Home</a></li>
+            @for (item of mainMenu; track $index) {
+            <li><a href="" class="desktop-item">{{item.mainLink}}<mat-icon>arrow_drop_down</mat-icon></a>
+                <input type="checkbox" [id]="item.showMega">
+                <label [for]="item.showMega"
+                    class="mobile-item">{{item.mainLink}}<mat-icon>arrow_drop_down</mat-icon></label>
+                <div class="mega-box">
+                    <div class="content">
+                        @for (subitem of item.subMenu; track $index) {
+                        <div class="row">
+                            <h4 class="import-heading"><b>{{subitem.heading}}</b></h4>
+                            @for (Megaitem of subitem.megaLink; track $index) {
+                            <ul class="mega-links">
+                                <li [title]="Megaitem.mega_name"><a [href]="Megaitem.mega_link" id="icons">
+                                        <img [src]="Megaitem.mega_icons"
+                                            [alt]="Megaitem.mega_name"><span>{{Megaitem.mega_name}}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            }
+
+                        </div>
+                        }
+                    </div>
+                </div>
+            </li>
+            }
+
+
+            <li><a href="#" class="desktop-item">Exercises & Quizzes<mat-icon>arrow_drop_down</mat-icon></a>
+                <input type="checkbox" id="showDropQuizzes">
+                <label for="showDropQuizzes" class="mobile-item">Exercises &
+                    Quizzes<mat-icon>arrow_drop_down</mat-icon></label>
+                <ul class="drop-menu">
+                    <li class="demo-section"><a href="#" id="icons" target="_blank">
+                            <img src="assets/icons/webdevloper.svg" alt="Courses Library" width="50px" height="50px">
+                            <span> Web Development </span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" target="_blank" id="icons">
+                            <img src="assets/icons/code.svg" alt="eBook Library" width="50px" height="50px">
+                            <span> Programming </span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" target="_blank" id="icons">
+                            <img src="assets/icons/database.svg" alt="Databases" width="50px" height="50px">
+                            <span> Databases </span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" id="icons">
+                            <img src="assets/icons/chart.svg" alt="Data-Analytics" width="50px" height="50px">
+                            <span>Data-Analytics</span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" target="_blank" id="icons">
+                            <img src="assets/icons/android/android.svg" alt="Mobile App" width="50px" height="50px">
+                            <span> Mobile App</span>
+                        </a>
+                    </li>
+                    <li><a href="https://kaszillatech.com/" target="_blank" id="icons">
+                        <img src="assets/icons/right.svg" alt="Blog Newsletter" width="50px" height="50px">
+                        <span>All Quizzes</span>
+                    </a>
+                </li>
+                </ul>
+            </li>
+
+
+            <li><a href="#" class="desktop-item">Courses<mat-icon>arrow_drop_down</mat-icon></a>
+                <input type="checkbox" id="showDropDigital">
+                <label for="showDropDigital" class="mobile-item">Courses<mat-icon>arrow_drop_down</mat-icon></label>
+                <ul class="drop-menu">
+                    <li class="demo-section"><a href="#" id="icons" target="_blank">
+                            <img src="assets/icons/code.svg" alt="Courses Library" width="50px" height="50px">
+                            <span> Full Stack Web Developer </span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" target="_blank" id="icons">
+                            <img src="assets/icons/analytics/ai.svg" alt="eBook Library" width="50px" height="50px">
+                            <span> AI/ML Technologies </span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" target="_blank" id="icons">
+                            <img src="assets/icons/program/java.svg" alt="Databases" width="50px" height="50px">
+                            <span> Java Full Stack Developer</span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" id="icons">
+                            <img src="assets/icons/chart.svg" alt="Data-Analytics" width="50px" height="50px">
+                            <span>Data Science</span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" target="_blank" id="icons">
+                            <img src="assets/icons/android/android.svg" alt="Mobile App" width="50px" height="50px">
+                            <span>App Development</span>
+                        </a>
+                    </li>
+                    <li><a href="https://kaszillatech.com/" target="_blank" id="icons">
+                            <img src="assets/icons/right.svg" alt="Blog Newsletter" width="50px" height="50px">
+                            <span>All Courese</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li><a href="#" class="desktop-item">Playground <mat-icon>arrow_drop_down</mat-icon></a>
+                <input type="checkbox" id="showDropFeature">
+                <label for="showDropFeature" class="mobile-item">Playground<mat-icon>arrow_drop_down</mat-icon></label>
+                <ul class="drop-menu">
+                    <li class="demo-section"><a href="#" id="icons" target="_blank">
+                            <img src="assets/icons/program/java.svg" alt="Java Compiler " width="50px" height="50px">
+                            <span> Java Compiler <span style="color:#9341f1; font-size: 8px;"> Feature</span></span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" target="_blank" id="icons">
+                            <img src="assets/icons/program/python.svg" alt="Python Compiler" width="50px" height="50px">
+                            <span> Python Compiler <span style="color:#9341f1; font-size: 8px;"> Feature</span></span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" id="icons">
+                            <img src="assets/icons/program/cplusplus.svg" alt="C++ Compiler" width="50px" height="50px">
+                            <span>C++ Compiler <span style="color:#9341f1; font-size: 8px;"> Feature</span></span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" target="_blank" id="icons">
+                            <img src="assets/icons/web/html.svg" alt="HTML Editor" width="50px" height="50px">
+                            <span>HTML Editor<span style="color:#9341f1; font-size: 8px;"> Feature</span></span>
+                        </a>
+                    </li>
+
+                    <li><a href="https://kaszillatech.com/" target="_blank" id="icons">
+                            <img src="assets/icons/right.svg" alt="Blog Newsletter" width="50px" height="50px">
+                            <span>All Compiler</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="desktop-item">More Details<mat-icon>arrow_drop_down</mat-icon></a>
+                <input type="checkbox" id="showDropMore">
+                <label for="showDropMore" class="mobile-item">More Details<mat-icon>arrow_drop_down</mat-icon></label>
+                <ul class="drop-menu">
+
+                    <li><a href="#" target="_blank" id="icons" title="Feature">
+                            <img src="assets/icons/ourservice/book.svg" alt="eBook Library" width="50px" height="50px">
+                            <span> eBooks Library</span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" target="_blank" id="icons" title="Feature">
+                            <img src="assets/icons/ourservice/youtube.svg" alt="Learners Youtube" width="50px"
+                                height="50px">
+                            <span>Learners Youtube</span>
+                        </a>
+                    </li>
+
+                    <li><a href="https://kaszillatech.com/" target="_blank" id="icons" title="Feature">
+                            <img src="assets/icons/ourservice/tools.svg" alt="Free Tools" width="50px" height="50px">
+                            <span>Free Tools</span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" id="icons">
+                        <img src="assets/icons/mock-test.svg" alt="Blog Newsletter" width="50px" height="50px">
+                        <span>Create Mock Test</span>
+                    </a>
+                </li>
+
+                <li><a href="https://kaszillatech.com/" target="_blank" id="icons">
+                        <img src="assets/icons/questions.svg" alt="Interview Questions" width="50px" height="50px">
+                        <span>Interview Questions </span>
+                    </a>
+                </li>
+
+                </ul>
+            </li>
+
+            <li><a routerLink="/auth/login" class="loginbtn">Mentorship</a>
+        </ul>
+
+
+        <ul type="none" class="loginside">
+            <!-- <li><a href="">Get Certificate</a></li> -->
+            <li (click)="toggleTheme()" style="margin-top: 10px;" class="desktop-item">
+                @if (isDarkMode) {
+                <mat-icon>light_mode</mat-icon>
+                }@else {
+                <mat-icon>dark_mode</mat-icon>
+                }
+            </li>
+
+
+            @if (isLoggedIn) {
+            <li><a routerLink="/auth/login" class="loginbtn">Login</a>
+            </li>
+            }@else {
+            <li class="loginuser">
+                <img src="assets/images/homepage/satendra.png" [matMenuTriggerFor]="menu">
+                <mat-menu #menu="matMenu">
+                    <div style="display: flex; padding: 10px 10px;">
+                        <img src="assets/images/homepage/satendra.png" width="40px" height="40px">
+                        <p style="padding: 10px; color: #26a69a; font-weight: bold;"> {{autherDetails.data?.fullName}}
+                        </p>
+                    </div>
+                    <button mat-menu-item (click)="dashboard()">
+                        <mat-icon>dashboard</mat-icon>
+                        <span>Dashboard</span>
+                    </button>
+                    <button mat-menu-item (click)="profile()">
+                        <mat-icon>person_edit</mat-icon>
+                        <span>Edit Profile</span>
+                    </button>
+                    <button mat-menu-item (click)="Certificates()">
+                        <mat-icon>verified</mat-icon>
+                        <span>My Certificates</span>
+                    </button>
+                    <button mat-menu-item (click)="Billing()">
+                        <mat-icon>payments</mat-icon>
+                        <span>Billing</span>
+                    </button>
+                    <button mat-menu-item (click)="logoutUser()">
+                        <mat-icon>logout</mat-icon>
+                        <span>Logout</span>
+                    </button>
+                </mat-menu>
+            </li>
+            }
+
+        </ul>
+
+        <label for="menu-btn" class="btn menu-btn"
+            (click)="closeMenu()"><i>Menu<mat-icon>arrow_drop_down</mat-icon></i></label>
+    </div>
+</nav>

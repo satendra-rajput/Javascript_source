@@ -160,9 +160,9 @@
 
     <!-- hare Model code -->
     <div id="myModal" class="modal">
-        <div class="modal-content">
+        <div class="modalcontent">
           <!-- <span class="close">&times;</span> -->
-          <div class="form-container">
+          <div class="formcontainer">
             <form id="changePasswordForm">
                 <h2>Change Password</h2>
                 
@@ -176,6 +176,10 @@
 
                 <label for="confirmPassword">Confirm New Password</label>
                 <input type="password" id="confirm" name="confirm" required placeholder="Confirm New Password">
+                <span id="confirmError" class="error text-danger"></span>
+                
+                <label for="confirmPassword">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Full Name">
                 <span id="confirmError" class="error text-danger"></span>
                 
                 <br>

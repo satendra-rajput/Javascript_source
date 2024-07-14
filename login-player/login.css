@@ -148,48 +148,11 @@ html {
     height: auto;
     color: white;
     position: relative;
-    right: 100px;
+    /* right: 100px; */
     /* overflow: hidden; */
     bottom: 70px;
     animation: rotating-border 4s infinite;
 }
-
-/* .login-container::before{
-    content: "";
-    background-color: #000031 transparent 120deg;
-    width: 150%;
-    height: 150%;
-    border-bottom: 2px solid #fff;
-    position: absolute;
-    animation: rotate 2s linear infinite;
-}
-
-.login-container::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border-radius: 10px;
-    background-color: #4747d3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    box-shadow: inset 20px 20px 20px #0000;
-    animation: rotate 2s linear infinite;
-}
-
-
-@keyframes rotate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(-360deg);
-    }
-} */
-
-
 
 
 /* Centered Logo */
@@ -210,30 +173,6 @@ html {
     font-size: 12px;
 }
 
-
-/* .left-spinner{
-    position: absolute;
-    width: 78px;
-    height: 1px;
-    padding: 0px 0px;
-    background: blue;
-    box-shadow: 0 0 10px #e6eded, 0 0 20px #f0f4f5, 0 0 30px #eaeff2;
-    transform: rotate(90deg);
-    margin-left: -69px;
-    margin-top: 140px;
-}
-
-.right-spinner{
-    position: absolute;
-    width: 78px;
-    height: 1px;
-    padding: 0px 0px;
-    background: blue;
-    box-shadow: 0 0 10px #00b0ff, 0 0 20px #00b0ff, 0 0 30px #00b0ff;
-    transform: rotate(90deg);
-    margin-top: 250px;
-    margin-left: 81%;
-} */
 
 #loginForm {
     width: 280px;
@@ -563,12 +502,11 @@ html {
         background-image: url(img/frame1_form.png);
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 30px;
+        padding: 20px;
         /* height: 65vh !important; */
         color: white;
         position: relative;
         margin: 0 0px;
-        right: 16px;
         /* overflow: hidden; */
         top: 69px;
         animation: rotating-border 4s infinite;

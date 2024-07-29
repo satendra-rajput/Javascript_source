@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.card {
+  background-color: #222;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: #eee;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left-arrow:hover {
+  background-color: #ddd;
+}
+
+.left-arrow svg {
+  width: 15px;
+  height: 15px;
+  fill: #222;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: #eee;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.right-arrow:hover {
+  background-color: #ddd;
+}
+
+.right-arrow svg {
+  width: 15px;
+  height: 15px;
+  fill: #222;
+}
+
+.text {
+  margin-top: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.text-content {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.background-hexagon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.imgur.com/V9W1h6A.png');
+  background-size: cover;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.background-hexagon-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.imgur.com/V9W1h6A.png');
+  background-size: cover;
+  pointer-events: none;
+  opacity: 0.1;
+  filter: blur(10px);
+}
+
+.card-header {
+  background-color: #0f9d58;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        WHAT OUR CLIENTS SAY
+      </div>
+      <div class="image-container">
+        <img src="./PPF page 1/IMG_0177.jpg" alt="Car Image" />
+        <div class="left-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </div>
+        <div class="right-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+      </div>
+      <div class="text">
+        is always the trusted shop i go for my yearly polishing and paint protectionservice. 5star service!
+      </div>
+      <div class="text-content">
+        Steady bom pipi!!<br>
+        Mr.Chris Tan<br>
+        at eazycool Johor Baharu
+      </div>
+    </div>
+    <div class="background-hexagon-blur"></div>
+    <div class="background-hexagon"></div>
+  </div>
+</body>
+</html>

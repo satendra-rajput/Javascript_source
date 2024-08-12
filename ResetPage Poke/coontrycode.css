@@ -1,0 +1,154 @@
+/* country code CSS */
+.iti__country-list {
+    position: absolute !important;
+    z-index: 2 !important;
+    list-style: none !important;
+    text-align: left !important;
+    padding: 0 !important;
+    margin: 0 0 0 -1px !important;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2) !important;
+    background-color: white !important;
+    border: 1px solid #CCC !important;
+    white-space: nowrap !important;
+    color: #000 !important;
+    width: 388px;
+    max-height: 200px !important;
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-top: 3px !important;
+    border-radius: 5px !important;
+    
+}
+
+.verification-container {
+    background: #fff !important;
+    max-width: 400px !important;
+    margin: 50px auto !important;
+    padding: 30px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.verification-input {
+    width: 55px !important;
+    height: 55px !important;
+    flex-shrink: 0 !important;
+    border-radius: 6px !important;
+    border: 1.5px solid #9F9F9F !important;
+    background: #FFF !important;
+    outline-color: #2861cf;
+}
+
+/* custom scroll bar
+.iti__country-list::-webkit-scrollbar {
+    width: 10px !important;
+    overflow-x: hidden;
+}
+
+.iti__country-list::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+.iti__country-list::-webkit-scrollbar-thumb {
+    background: #203caf !important;
+    border-radius: 5px !important;
+} */
+
+
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 567px) {
+
+    /* country code CSS */
+    .iti__country-list {
+        width: 415px !important;
+        margin: auto !important;
+    }
+
+    .verification-container {
+        max-width: 360px !important;
+        margin: 50px auto !important;
+        padding: 25px !important;
+    }
+    
+    .verification-input {
+        width: 52px !important;
+        height: 52px !important;
+    }
+}
+
+@media only screen and (min-device-width: 410px) and (max-device-width: 440px) {
+
+    /* country code CSS */
+    .iti__country-list {
+        width: 350px !important;
+    }
+
+    .verification-container {
+        max-width: 355px !important;
+        margin: 50px auto !important;
+        padding: 20px !important;
+    }
+    
+    .verification-input {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+
+@media only screen and (min-device-width: 361px) and (max-device-width: 390px) {
+
+    /* country code CSS */
+    .iti__country-list {
+        width: 315px !important;
+    }
+
+    .verification-container {
+        max-width: 340px !important;
+        margin: 50px auto !important;
+        padding: 15px 5px!important;
+    }
+    
+    .verification-input {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 360px) {
+
+    /* country code CSS */
+    .iti__country-list {
+        width: 300px !important;
+    }
+
+    .verification-container {
+        max-width: 320px !important;
+        margin: 50px auto !important;
+        padding: 5px !important;
+    }
+    
+    .verification-input {
+        width: 45px !important;
+        height: 45px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

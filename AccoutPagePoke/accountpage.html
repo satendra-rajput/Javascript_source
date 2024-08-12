@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acount page</title>
+    <link rel="stylesheet" href="accountpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="account-page-container">
+        <div class="account-page-row">
+            <div class="account-page">
+                <div class="account-change-password" onclick="toggleDropdown('dropdown1', this)">
+                    <p style="cursor: pointer; color: #265AD3; font-weight: 600;"><img src="./gravity-ui_hand-point-up.png" alt=""> Change Password</p>
+                </div>
+    
+                <div class="account-personal-info" onclick="toggleDropdown('dropdown2', this)">
+                    <div class="account-icons">
+                        <p><img src="./gravity-ui_hand-point-up.png" alt=""> Personal Info</p>
+                        <p class="arroriconsaccount"><span class="material-symbols-outlined accounticons">arrow_forward_ios</span></p>
+                    </div>
+                    <div id="dropdown2" class="account-dropdown-content">
+                        <div class="account-data-line">
+                            <div class="account-data">
+                                <p>Name</p>
+                                <p>Chan Jun Hui</p>
+                            </div>
+                        </div>
+                       
+                        <div class="account-data-line">
+                        <div class="account-data">
+                            <p>Username</p>
+                            <p>u9cjh123</p>
+                        </div>
+                        </div>
+
+                        <div class="account-data-line">
+                        <div class="account-data">
+                            <p>Date of Birth</p>
+                            <p>2000-01-01</p>
+                        </div>
+                        </div>
+
+                        <div class="account-data-line">
+                        <div class="account-data">
+                            <p>Gender</p>
+                            <p>Male</p>
+                        </div>
+                        </div>
+
+                        <div class="account-data-line">
+                        <div class="account-data">
+                            <p>Email</p>
+                            <p>De********@gmail.com</p>
+                        </div>
+                        </div>
+
+                        <div class="account-data-line">
+                        <div class="account-data">
+                            <p>Mobile</p>
+                            <p>60********</p>
+                        </div>
+                        </div>
+
+                        <div class="account-data-line">
+                        <div class="account-data">
+                            <p>Time Zone</p>
+                            <p>+08:00</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="account-balance" onclick="toggleDropdown('dropdown3', this)">
+                    <div class="account-icons">
+                        <p><img src="./gravity-ui_hand-point-up.png" alt=""> Balance</p>
+                        <p class="arroriconsaccount"><span class="material-symbols-outlined accounticons">arrow_forward_ios</span></p>
+                    </div>
+                    <div id="dropdown3" class="account-dropdown-content">
+                        <div class="account-data-line">
+                            <div class="account-data">
+                                <p>Available Balance</p>
+                                <p>28.14
+                            </div>
+                        </div>
+
+                        <div class="account-data-line">
+                            <div class="account-data">
+                                <p>Outstanding</p>
+                                <p>00.00
+                            </div>
+                        </div>
+
+                        <div class="account-data-line">
+                            <div class="account-data">
+                                <p>Currency</p>
+                                <p>MYR
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="account-balance" onclick="toggleDropdown('dropdown4', this)">
+                    <div class="account-icons">
+                        <p><img src="./gravity-ui_hand-point-up.png" alt=""> Bank Account</p>
+                        <p class="arroriconsaccount"><span class="material-symbols-outlined accounticons">arrow_forward_ios</span></p>
+                    </div>
+                    <div id="dropdown4" class="account-dropdown-content">
+                        <div class="account-data-line">
+                            <div class="account-data">
+                                <p>Account Number</p>
+                                <p>6442581408
+                            </div>
+                        </div>
+
+                        <div class="account-data-line">
+                            <div class="account-data">
+                                <p>Bank Branch</p>
+                                <p>Beijing
+                            </div>
+                        </div>
+
+                        <div class="account-data-line">
+                            <div class="account-data">
+                                <p>Account Holder Name</p>
+                                <p>Chan Jun Hui
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="accout-edit">
+                <!-- <a href="">Edit Profile</a> -->
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <!-- JavaScript code start -->
+    <script>
+      function toggleDropdown(dropdownId, element) {
+    var dropdowns = document.querySelectorAll('.account-dropdown-content');
+    var icons = document.querySelectorAll('.accounticons');
+
+    dropdowns.forEach(function(dropdown) {
+        if (dropdown.id !== dropdownId) {
+            dropdown.classList.remove('show-dropdown');
+        }
+    });
+
+    icons.forEach(function(icon) {
+        icon.classList.remove('rotate');
+    });
+
+    var dropdown = document.getElementById(dropdownId);
+    var icon = element.querySelector('.accounticons');
+
+    if (dropdown.classList.contains('show-dropdown')) {
+        dropdown.classList.remove('show-dropdown');
+        icon.classList.remove('rotate');
+    } else {
+        dropdown.classList.add('show-dropdown');
+        icon.classList.add('rotate');
+    }
+}
+
+
+    </script>
+</body>
+
+</html>

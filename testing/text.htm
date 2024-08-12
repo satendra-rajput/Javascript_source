@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="first_accordion" id="faqAccordion">
+        <a href="#" class="firstBonusCard">Accordion 1</a>
+        <a href="#" class="firstBonusCard">Accordion 1</a>
+        <a href="#" class="firstBonusCard">Accordion 1</a>
+      </div>
+      
+      <div class="second_accordion" id="faqAccordion">
+        <a href="#" class="faqLink">Accordion 2</a>
+        <div class="faqContent">
+          <p>Content for Accordion 2</p>
+        </div>
+      </div>
+      
+      <div class="third_accordion" id="faqAccordion">
+        <a href="#" class="faqLink">Accordion 3</a>
+        <div class="faqContent">
+          <p>Content for Accordion 3</p>
+        </div>
+      </div>
+
+      <script>
+        // Sabhi .faqLink elements ko select karte hain
+const faqLinks = document.querySelectorAll('.faqLink');
+
+// Sabhi links par click event listener lagate hain
+faqLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Default link behavior ko prevent karte hain
+
+        // Current clicked accordion ko toggle karne ke liye content div ko find karte hain
+        const faqContent = this.nextElementSibling;
+
+        // Check karte hain agar current content visible hai, toh hide karein, nahi toh show karein
+        if (faqContent.style.display === 'block') {
+            faqContent.style.display = 'none';
+        } else {
+            faqContent.style.display = 'block';
+        }
+
+        // Ensure other accordions are closed
+        document.querySelectorAll('.faqContent').forEach(content => {
+            if (content !== faqContent) {
+                content.style.display = 'none';
+            }
+        });
+    });
+});
+
+      </script>
+</body>
+</html>

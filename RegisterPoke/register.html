@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.7.3/build/css/intlTelInput.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="register.css">
+
+  <style>
+    :root {
+      --primary-color: #2861cf !important;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif !important;
+      background: url("Assets/bg.png") !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+    }
+
+    .iti__search-input {
+      width: 100%;
+      border-width: 0;
+      border-radius: 3px;
+      padding: 9px 12px;
+      display: none !important;
+    }
+
+    .registration-card {
+      max-width: 700px !important;
+    }
+
+    .form-label {
+      color: var(--primary-color) !important;
+      font-weight: 600 !important;
+    }
+
+    .form-control,
+    .input-group-text {
+      border-color: var(--primary-color) !important;
+      border-width: 2px !important;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary-color) !important;
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+    }
+
+    .form-check-input:checked+.form-check-label {
+      color: var(--primary-color) !important;
+      font-weight: 600 !important;
+    }
+
+    .form-check-input:checked {
+      background-color: var(--primary-color) !important;
+      border-color: var(--primary-color) !important;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color) !important;
+    }
+
+    .border-primary {
+      border-color: var(--primary-color) !important;
+    }
+
+    .text-primary {
+      color: var(--primary-color) !important;
+    }
+
+    .iti {
+      width: inherit !important;
+    }
+
+    ::placeholder {
+      color: black !important;
+    }
+
+    .desktop-contact .active,
+    .mobile-contact .active {
+      background: var(--primary-color) !important;
+    }
+
+    .desktop-contact,
+    .mobile-contact {
+      display: none !important;
+    }
+
+    .desktop-contact {
+      display: block !important;
+    }
+
+    /* verification popup */
+   
+
+    .verification-container h4,
+    .verification-code input {
+      color: var(--primary-color) !important;
+    }
+
+    .verification-code {
+      display: flex !important;
+      justify-content: space-between !important;
+      margin-bottom: 20px !important;
+    }
+
+    
+    .resend-timer {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      font-size: 14px !important;
+      color: #666 !important;
+      margin-bottom: 20px !important;
+    }
+
+    .btn {
+      border-radius: 15px !important;
+      /* Capsule rounded */
+    }
+
+    @media screen and (max-width: 660px) {
+      .container {
+        padding: 0 !important;
+      }
+
+      .otp-button-grp {
+        margin-top: 10px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        gap: 10px !important;
+      }
+
+      .desktop-contact,
+      .mobile-contact {
+        display: none !important;
+      }
+
+      .mobile-contact {
+        display: flex !important;
+        justify-content: space-between !important;
+        gap: 10px !important;
+      }
+
+      .registration-card .btn {
+        width: 100% !important;
+      }
+    }
+
+    .iti__selected-dial-code {
+      color: black;
+    }
+
+    .mobile_reg {
+      color: #A1A1A1 !important;
+    }
+
+    .email_reg {
+      color: #A1A1A1 !important;
+    }
+
+
+    .otp-button-grp .btn.active {
+      color: white;
+      background-color: #2861cf;
+    }
+
+  
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <div class="navbar containers" style="padding: 0px 8px;">
+    <div class="navbar_container d-flex align-items-center justify-content-between w-100 row">
+      <div class=" col d-flex justify-content-start align-items-center">
+        <img class="navbar_arrow" src="Assets/leftarrow.svg">
+        <div class=" navbarbutton   ">
+          <div class="navbar_bg  ">
+            <img src="Assets/navbarBtn.svg">
+          </div>
+          <div class="navbar_text_div">
+            <h1 class="navbar_heading m-0">Hi Cheong yuen ching</h1>
+          </div>
+        </div>
+        <div class="navbar_price_btn_div navbar_btns_mobile">
+          <div class="position-relative d-flex align-items-center">
+            <img class="position-absolute uppershadow" src="Assets/upeershadow.svg">
+            <div class="btn_first d-flex justify-content-between align-items-center">
+              <img class="navbar_btn_dollar_img" src="Assets/dollar.svg">
+              <p class="nav_btn_price">2340.0</p>
+            </div>
+            <img class="position-absolute downshadow" src="Assets/upeershadow.svg">
+          </div>
+          <div class="position-relative d-flex align-items-center">
+            <img class="position-absolute uppershadow" src="Assets/upeershadow.svg">
+            <div class="btn_first d-flex justify-content-between align-items-center">
+              <img class="navbar_btn_dollar_img" src="Assets/dollar.svg">
+              <p class="nav_btn_price">2340.0</p>
+            </div>
+            <img class="position-absolute downshadow" src="Assets/upeershadow.svg">
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <img src="Assets/logo.svg">
+      </div>
+
+      <div class="col d-flex justify-content-end">
+        <div class="navbar_price_btn_div navbar_btns_desktop">
+          <div class="position-relative d-flex align-items-center">
+            <img class="position-absolute uppershadow" src="Assets/upeershadow.svg">
+            <div class="btn_first d-flex justify-content-between align-items-center">
+              <img class="navbar_btn_dollar_img" src="Assets/dollar.svg">
+              <p class="nav_btn_price">2340.0</p>
+            </div>
+            <img class="position-absolute downshadow" src="Assets/upeershadow.svg">
+          </div>
+          <div class="position-relative d-flex align-items-center">
+            <img class="position-absolute uppershadow" src="Assets/upeershadow.svg">
+            <div class="btn_first d-flex justify-content-between align-items-center">
+              <img class="navbar_btn_dollar_img" src="Assets/dollar.svg">
+              <p class="nav_btn_price">2340.0</p>
+            </div>
+            <img class="position-absolute downshadow" src="Assets/upeershadow.svg">
+          </div>
+        </div>
+
+        <div class="hamburger_W">
+          <img id="first-button" src="Assets/Group 5.svg" alt="Menu Icon">
+          <!-- First icon -->
+
+          <img id="second-button" src="Assets/Hamburger.svg" alt="Menu Icon">
+          <!-- Second icon -->
+
+          <div class="dropdown-menu" style="display: none;">
+            <a class="dropdown-item active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1"
+              aria-selected="true">PLAYER LOGIN</a>
+            <a class="dropdown-item " id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2"
+              aria-selected="false">AGENT LOGIN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid " style="padding: 0px;">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+        <div class="bg min-vh-100 align-items-center justify-content d-flex flex-column imagediv">
+
+
+          <div class="container mt-5">
+            <div class="card registration-card m-auto p-4">
+              <div class="card-body p-0 p-sm-4">
+                <h2 class="text-center text-primary mb-2 fw-bolder title">
+                  Player Registration Form
+                </h2>
+                <p class="text-sm-center text-primary fs-sm-5 fw-bold mb-4">
+                  Referrer Code: <span class="fw-bold text-dark">282516</span>
+                  <span class="text-success">✓</span>
+                </p>
+                <form id="register" method="post" action="registor.html">
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="userID" class="form-label">User ID</label>
+                      <input type="text" class="form-control" id="userID" placeholder="Player Registration ID" />
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="fullName" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" />
+                      <small class="text-muted">Real Name for withdraw verification</small>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="dob" class="form-label">DOB</label>
+                      <input type="date" class="form-control" id="dob" />
+                      <small class="text-muted">Must be over 18 years</small>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Enter your password" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="confirmPassword" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" id="confirmPassword"
+                        placeholder="Confirm your password" />
+                    </div>
+                  </div>
+                  <div class="mb-3 desktop-contact">
+                    <div class="form-check form-check-inline ">
+                      <input class="form-check-input " type="radio" name="contactMethod" id="mobile" value="mobile"
+                        checked />
+                      <label class="form-check-label mobile_reg" for="mobile">Mobile</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                      <input class="form-check-input" type="radio" name="contactMethod" id="email" value="email" />
+                      <label class="form-check-label email_reg" for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="mb-3 mobile-contact">
+                    <button type="button" class="btn btn-outline-primary active" id="mobile-sm">
+                      Mobile
+                    </button>
+                    <button type="button" class="btn btn-outline-primary" id="email-sm">
+                      Email
+                    </button>
+                  </div>
+                  <div class="row mb-3 mobile-box">
+                    <div class="col-md">
+                      <div class="input-group">
+                        <input type="text" id="mobile_code" class="form-control w-full " placeholder="Phone Number"
+                          name="name" />
+                      </div>
+                    </div>
+                    <div class="col-md-auto otp-button-grp">
+                      <button class="btn active" type="button">SMS OTP</button>
+                      <button class="btn border-2 border-primary" type="button">
+                        <img src="Assets/whatsappicon.svg" width="24px" alt="" /> OTP
+                      </button>
+                    </div>
+
+                    <div class="row">
+
+                    </div>
+
+
+                  </div>
+                  <div class="mb-3 email-box" style="display:none">
+                    <input type="text" class="form-control" id="email" placeholder="Enter your email address" />
+                  </div>
+                  <button type="submit" class="btn btn-primary">SEND CODE</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="mobileVerificationModal" tabindex="3"
+            aria-labelledby="mobileVerificationModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content bg-transparent border-0">
+                <div class="modal-body">
+                  <div class="verification-container">
+                    <div class="p-4">
+                      <h4 class="text-center text-primary mb-2 fw-bolder fs-5">Verify Your Mobile Number</h4>
+                      <p class="text-muted">We have sent the verification code to your mobile number</p>
+                    </div>
+                    <div class="verification-code">
+                      <input class="numberverify" type="text" maxlength="1" id="otp1" oninput="moveToNext(this, 'otp2')"
+                        onkeydown="moveToPrev(event, 'otp1', null)" />
+                      <input class="numberverify" type="text" maxlength="1" id="otp2" oninput="moveToNext(this, 'otp3')"
+                        onkeydown="moveToPrev(event, 'otp2', 'otp1')" />
+                      <input class="numberverify" type="text" maxlength="1" id="otp3" oninput="moveToNext(this, 'otp4')"
+                        onkeydown="moveToPrev(event, 'otp3', 'otp2')" />
+                      <input class="numberverify" type="text" maxlength="1" id="otp4" oninput="moveToNext(this, 'otp5')"
+                        onkeydown="moveToPrev(event, 'otp4', 'otp3')" />
+                      <input class="numberverify" type="text" maxlength="1" id="otp5" oninput="moveToNext(this, 'otp6')"
+                        onkeydown="moveToPrev(event, 'otp5', 'otp4')" />
+                      <input class="numberverify" type="text" maxlength="1" id="otp6"
+                        onkeydown="moveToPrev(event, 'otp6', 'otp5')" />
+                    </div>
+                    <div class="resend-timer">
+                      <a href="#" class="text-primary text-decoration-none resendcodebtn">Resend Code</a>
+                      <div class="text-primary timer text-decoration-none resendcodetimer">01:30</div>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-2 w-100 m-auto"
+                      onclick="verificationSuccess()">CONFIRM</button>
+                    <button type="button" class="btn border-2 border-primary mt-2 w-100 m-auto"
+                      data-bs-dismiss="modal">CANCEL</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="emailVerificationModal" tabindex="3" aria-labelledby="emailVerificationModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content bg-transparent border-0">
+                <div class="modal-body">
+                  <div class="verification-container">
+                    <div class="p-4">
+                      <h4 class="text-center text-primary mb-2 fw-bolder fs-5">Verify Your email address</h4>
+                      <p class="text-muted">We have sent the verification code to your email address</p>
+                    </div>
+                    <div class="verification-code">
+                      <input type="text" maxlength="1" id="otpe1" oninput="moveToNext(this, 'otpe2')" onkeydown="moveToPrev(event, 'otpe1', null)"/>
+                      <input type="text" maxlength="1" id="otpe2" oninput="moveToNext(this, 'otpe3')" onkeydown="moveToPrev(event, 'otpe2', 'otpe1')"/>
+                      <input type="text" maxlength="1" id="otpe3" oninput="moveToNext(this, 'otpe4')" onkeydown="moveToPrev(event, 'otpe3', 'otpe2')"/>
+                      <input type="text" maxlength="1" id="otpe4" oninput="moveToNext(this, 'otpe5')" onkeydown="moveToPrev(event, 'otpe4', 'otpe3')" />
+                      <input type="text" maxlength="1" id="otpe5" oninput="moveToNext(this, 'otpe6')" onkeydown="moveToPrev(event, 'otpe5', 'otpe4')"/>
+                      <input type="text" maxlength="1" id="otpe6" onkeydown="moveToPrev(event, 'otpe6', 'otpe5')"/>
+
+                    </div>
+                    <div class="resend-timer">
+                      <a href="#" class="text-primary text-decoration-none resendcodebtn">Resend Code</a>
+                      <div class="text-primary timer text-decoration-none resendcodetimer">01:30</div>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-2 w-100 m-auto"
+                      onclick="verificationSuccess()">CONFIRM</button>
+                    <button type="button" class="btn border-2 border-primary mt-2 w-100 m-auto"
+                      data-bs-dismiss="modal">CANCEL</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="verificationSuccessModal" tabindex="3"
+            aria-labelledby="verificationSuccessModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content bg-transparent border-0">
+                <div class="modal-body">
+                  <div class="verification-container">
+                    <span class="m-auto fs-1"><img src="icon-tick.png" width="100px" alt=""></span>
+                    <h4 class="fs-3 fw-bold mt-4">Verified!</h4>
+                    <p class="text-muted fs-6">Yahoo! You have successfully verified the account.</p>
+                    <button type="button" class="btn btn-primary w-100 mt-2" data-dismiss="modal"
+                      onclick="window.open('registor.html','_self')">Go To Dashboard</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" container_language flex-column align-items-center " id="langpopupcls">
+            <div class="language_div d-flex flex-column align-items-center  py-3">
+              <div class="w-100 px-3 py-3  border-bottom d-flex justify-content-between">
+                <h3 class=" mb-0 mobileheadlang font-weight-bold ">Language</h3>
+                <img style="top:40px ;right:40px;width: 20px;" id="closebtn" src="Assets/maki_cross.svg" />
+              </div>
+              <div class="w-100 languagediv">
+                <a class="langbtn" href="">
+                  <div class="d-flex mx-3  py-3 px-0 align-items-center border-bottom border border-white rounded ">
+                    <img class="flag_size" src="Assets/uk.png" />
+                    <p class="mb-0 ml-3 text-dark font-weight-bold ">English</p>
+                  </div>
+                </a>
+                <a class="border-bottom" href="">
+                  <div class="d-flex  mx-3 py-3 px-0 align-items-center border-bottom border border-white rounded ">
+                    <img class="flag_size" src="Assets/malay.png" />
+                    <p class="mb-0 ml-3 text-dark font-weight-bold">國中文</p>
+                  </div>
+                </a>
+                <a class=" border-bottom" href="">
+                  <div class="d-flex  mx-3 py-3 px-0 align-items-center   ">
+                    <img class="flag_size" src="Assets/ujbekistan.png" />
+                    <p class="mb-0 ml-3 text-dark font-weight-bold">Malay</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- OTP verify -->
+          <script>
+            function moveToNext(current, nextFieldID) {
+              if (current.value.length >= 1) {
+                document.getElementById(nextFieldID).focus();
+              }
+            }
+
+            function moveToPrev(event, currentFieldID, prevFieldID) {
+              if (event.key === "Backspace" && !document.getElementById(currentFieldID).value) {
+                if (prevFieldID) {
+                  document.getElementById(prevFieldID).focus();
+                }
+              }
+            }
+
+
+            // function moveToNexte(current, nextFieldID) {
+            //   if (current.value.length >= 1) {
+            //     document.getElementById(nextFieldID).focus();
+            //   }
+            // }
+
+            // function moveToPrevee(event, currentFieldID, prevFieldID) {
+            //   if (event.key === "Backspace" && !document.getElementById(currentFieldID).value) {
+            //     if (prevFieldID) {
+            //       document.getElementById(prevFieldID).focus();
+            //     }
+            //   }
+            // }
+          </script>
+
+          <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.7.3/build/js/intlTelInput.min.js"></script>
+          <script>
+            document.querySelector('.T_bonus_div').addEventListener('click', function () {
+              document.querySelector('.view_frame').classList.toggle('scrollable');
+            });
+          </script>
+          <script>
+            $(document).ready(function () {
+              $("#second-button").click(function (event) {
+                event.stopPropagation();
+                $(".dropdown-menu").toggle();
+              });
+
+              $(document).click(function (event) {
+                var $target = $(event.target);
+                if (
+                  !$target.closest("#second-button").length &&
+                  !$target.closest(".dropdown-menu").length
+                ) {
+                  $(".dropdown-menu").hide();
+                }
+              });
+
+              $(".dropdown-menu").click(function (event) {
+                event.stopPropagation(); // Prevent the menu from closing when clicking inside
+              });
+
+              $(".dropdown-item").click(function (e) {
+                e.preventDefault();
+                $(".dropdown-item").removeClass("active");
+                $(this).addClass("active");
+                $(".tab-pane").removeClass("show active");
+                var target = $(this).attr("href");
+                $(target).addClass("show active");
+                $(".dropdown-menu").hide();
+              });
+            });
+
+            document.getElementById("closebtn").addEventListener("click", function () {
+              var targetDiv = document.getElementById("langpopupcls");
+              targetDiv.style.cssText += "display: none !important;";
+            });
+
+            document
+              .getElementById("first-button")
+              .addEventListener("click", function () {
+                var targetDiv = document.getElementById("langpopupcls");
+                targetDiv.style.cssText += "display: flex !important;";
+              });
+          </script>
+          <script>
+            // Initialize the intl-tel-input plugin with the default country set to the USA
+            const numberInput = document.getElementById("enteramount");
+
+            numberInput.addEventListener("input", function () {
+              numberInput.value = numberInput.value.replace(/\D/g, "");
+            });
+          </script>
+
+
+          <script>
+            $('input[name="contactMethod"]').click(function () {
+              if ($(this).val() === "email") {
+                $(".email-box").show();
+                $(".mobile-box").hide();
+              } else {
+                $(".email-box").hide();
+                $(".mobile-box").show();
+              }
+            });
+            $("#mobile-sm").click(function () {
+              $(this).addClass("active");
+              $("#email-sm").removeClass("active");
+              $(".email-box").hide();
+              $(".mobile-box").show();
+            });
+            $("#email-sm").click(function () {
+              $(this).addClass("active");
+              $("#mobile-sm").removeClass("active");
+              $(".email-box").show();
+              $(".mobile-box").hide();
+            });
+            $("#register").submit(function (e) {
+              e.preventDefault();
+              if ($("#email-sm").hasClass("active") || $('input[name="contactMethod"]:checked').val() === 'email') {
+                $("#emailVerificationModal").modal("show");
+              } else {
+                $("#mobileVerificationModal").modal("show");
+              }
+            });
+            function verificationSuccess() {
+              $("#emailVerificationModal").modal('hide');
+              $("#mobileVerificationModal").modal('hide');
+              $("#verificationSuccessModal").modal('show');
+            }
+
+            $('.otp-button-grp .btn').click(function () {
+              $('.otp-button-grp .btn').removeClass('active').addClass('border-2 border-primary');
+              $(this).addClass('active');
+            });
+          </script>
+          <script>
+            $(document).ready(function () {
+              const input = document.querySelector("#mobile_code");
+
+              window.intlTelInput(input, {
+                initialCountry: "in",        // Set the default country to India
+                separateDialCode: true,      // Display the dial code separately from the number
+                utilsScript:
+                  "https://cdn.jsdelivr.net/npm/intl-tel-input@23.7.3/build/js/utils.js",
+              });
+            });
+          </script>
+
+          <!--numbervlidation-->
+          <script>
+            document.getElementById('mobile_code').addEventListener('input', function (e) {
+              const value = e.target.value;
+              if (isNaN(value)) {
+                e.target.value = value.slice(0, -1); // Remove the last character if not a number
+              }
+            });
+
+          </script>
+          <script>
+            const elements = document.getElementsByClassName('numberverify');
+
+            for (let i = 0; i < elements.length; i++) {
+              elements[i].addEventListener('input', function (e) {
+                const value = e.target.value;
+                if (isNaN(value)) {
+                  e.target.value = value.slice(0, -1); // Remove the last character if not a number
+                }
+              });
+            }
+
+          </script>
+
+        </div>
+</body>
+
+</html>

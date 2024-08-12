@@ -1,0 +1,204 @@
+ :root {
+        --primary-color: #2861cf;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: url("bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      /* .title{
+            color: var(--primary-color);
+            font-family: Montserrat;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        } */
+      .registration-card {
+        max-width: 700px;
+      }
+      .form-label {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+      .form-control,
+      .input-group-text {
+        border-color: var(--primary-color);
+        border-width: 2px;
+      }
+      .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+      }
+      .form-check-input:checked + .form-check-label {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+      .form-check-input:checked {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+      .btn-primary {
+        background-color: var(--primary-color) !important;
+      }
+      .border-primary {
+        border-color: var(--primary-color) !important;
+      }
+      .text-primary {
+        color: var(--primary-color) !important;
+      }
+      .iti {
+        width: inherit;
+      }
+      .email-box {
+        display: none;
+      }
+      .desktop-contact .active,
+      .mobile-contact .active {
+        background: var(--primary-color);
+      }
+      .desktop-contact,
+      .mobile-contact {
+        display: none;
+      }
+      .desktop-contact {
+        display: block;
+      }
+
+      /* verification popup */
+      .verification-container {
+        background: #fff !important;
+        max-width: 400px !important;
+        margin: 50px auto !important;
+        padding: 10px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 8px !important;
+        text-align: center !important;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+      }
+      .verification-code input {
+      width: 55px !important;
+      height: 55px !important;
+      font-size: 24px !important;
+      text-align: center !important;
+      border: 1px solid #ccc !important;
+      border-radius: 4px !important;
+      font-weight: bold !important;
+      outline-color: #2861cf;
+    }
+
+      .verification-container h4,
+      .verification-code input {
+        color: var(--primary-color);
+      }
+      .verification-code {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .resend-timer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      .btn {
+        border-radius: 15px; /* Capsule rounded */
+      }
+      @media screen and (max-width: 660px) {
+        .container {
+          padding: 0;
+        }
+        .otp-button-grp {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+        }
+        .desktop-contact,
+        .mobile-contact {
+          display: none;
+        }
+        .mobile-contact {
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+        }
+        .registration-card .btn {
+          width: 100%;
+        }
+      }
+
+
+      @media only screen and (min-device-width: 414px) and (max-device-width: 440px) {
+        .verification-container {
+          background: #fff !important;
+          max-width: 400px !important;
+          margin: 50px auto !important;
+          padding: 15px !important;
+          border: 1px solid #ccc !important;
+          border-radius: 8px !important;
+          text-align: center !important;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+        }
+        .verification-code input {
+          width: 55px !important;
+          height: 55px !important;
+          font-size: 24px !important;
+          text-align: center !important;
+          border: 1px solid #ccc !important;
+          border-radius: 4px !important;
+          font-weight: bold !important;
+          outline-color: #2861cf;
+      }
+  
+      }
+
+      @media only screen and (min-device-width: 360px) and (max-device-width: 390px) {
+        .verification-container {
+          background: #fff !important;
+          max-width: 400px !important;
+          margin: 50px auto !important;
+          padding: 10px !important;
+          border: 1px solid #ccc !important;
+          border-radius: 8px !important;
+          text-align: center !important;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+        }
+        .verification-code input {
+          width: 48px !important;
+          height: 48px !important;
+          font-size: 24px !important;
+          text-align: center !important;
+          border: 1px solid #ccc !important;
+          border-radius: 4px !important;
+          font-weight: bold !important;
+          outline-color: #2861cf;
+      }
+      }
+      @media only screen and (min-device-width: 300px) and (max-device-width: 355px) {
+        .verification-container {
+          background: #fff !important;
+          max-width: 400px !important;
+          margin: 50px auto !important;
+          padding: 5px !important;
+          border: 1px solid #ccc !important;
+          border-radius: 8px !important;
+          text-align: center !important;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+        }
+        .verification-code input {
+          width: 40px !important;
+          height: 40px !important;
+          font-size: 24px !important;
+          text-align: center !important;
+          border: 1px solid #ccc !important;
+          border-radius: 4px !important;
+          font-weight: bold !important;
+          outline-color: #2861cf;
+      }
+      }
